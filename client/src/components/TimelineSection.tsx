@@ -146,14 +146,17 @@ export default function TimelineSection() {
           <h4 className="text-base font-bold text-amber-200 mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             A Profecia de Sarkomal (Rumor)
           </h4>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            De acordo com rumores que circulam em Yndaros e Forte do Cardo, a Igreja do Sol recuperou uma profecia 
+            de um antigo templo em ruínas há alguns dias de viagem a leste de Karvosti. O Primeiro Padre Jeseebegai nega 
+            firmemente qualquer conhecimento desse achado, mas isso não impediu que o rumor crescesse e se espalhasse. Em pouco tempo, numerosas versões da profecia surgiram, todas refletindo o mesmo tema básico — 
+            <strong className="text-amber-200/80"> Ambria deve ganhar o governo de toda a terra outrora governada pela antiga Symbaroum 
+            e a Rainha Korinthia ascenderá ao trono do último imperador desse império.</strong>
+          </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Segundo rumores que circulam em Yndaros e Forte do Cardo, a Igreja do Sol recuperou uma profecia 
-            de um antigo templo em ruínas a alguns dias de viagem a leste de Karvosti. O Primeiro Padre nega 
-            firmemente qualquer conhecimento, mas numerosas versões surgiram com o mesmo tema: 
-            <em className="text-amber-200/80"> "Ambria deve ganhar o governo de toda a terra outrora governada pela antiga Symbaroum 
-            e a Rainha Korinthia ascenderá ao trono do último imperador desse império."</em> A única estrofe 
-            em comum diz: <em className="text-foreground/70">"...quando dia e noite não têm significado, onde a escuridão brilha e a luz se oculta 
-            em sombras, lá repousa o trono que novamente deve carregar uma amante, uma regente, um par do divino..."</em>
+            Exceto pelo tema básico, as versões diferem muito uma da outra. Só existe uma estrofe 
+            em comum em todas as versões, alegadamente traduzida pela Cúria: <em className="text-foreground/80">"...quando dia e noite não têm significado, onde a escuridão brilha e a luz se oculta 
+            em sombras, lá repousa o trono que novamente deve carregar uma amante, uma regente, um par do divino..."</em>. Como sempre ocorre com profecias, ainda há espaço para inúmeras traduções e interpretações.
           </p>
         </CardContent>
       </Card>
