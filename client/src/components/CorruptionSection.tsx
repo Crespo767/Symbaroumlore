@@ -167,10 +167,10 @@ export default function CorruptionSection() {
             <div className="space-y-2">
               {corruptionSources.map((source) => (
                 <div key={source.source} className="flex items-center justify-between bg-secondary/30 rounded p-2">
-                  <span className="text-[11px] text-foreground/80">{source.source}</span>
+                  <span className="text-sm text-foreground/80">{source.source}</span>
                   <div className="flex items-center gap-2">
-                    <span className="text-[9px] text-muted-foreground">{source.amount}</span>
-                    <span className={`text-[8px] px-1.5 py-0.5 rounded ${
+                    <span className="text-xs text-muted-foreground">{source.amount}</span>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded ${
                       source.type === "Permanente" ? "bg-red-900/40 text-red-300" : "bg-amber-900/40 text-amber-300"
                     }`}>
                       {source.type}
@@ -211,8 +211,8 @@ export default function CorruptionSection() {
           <div className="grid md:grid-cols-3 gap-2">
             {corruptionStages.map((stage) => (
               <div key={stage.stage} className="bg-secondary/30 rounded p-2 border-l-2" style={{ borderLeftColor: stage.color }}>
-                <h4 className="text-xs font-bold" style={{ color: stage.color }}>{stage.stage}</h4>
-                <p className="text-[10px] text-muted-foreground mt-0.5">{stage.desc}</p>
+                <h4 className="text-sm font-bold" style={{ color: stage.color }}>{stage.stage}</h4>
+                <p className="text-xs text-muted-foreground mt-0.5">{stage.desc}</p>
               </div>
             ))}
           </div>
@@ -233,20 +233,20 @@ export default function CorruptionSection() {
           </p>
           <div className="grid md:grid-cols-4 gap-3">
             <div className="bg-green-950/20 rounded p-3 border border-green-900/30">
-              <h4 className="text-xs font-semibold text-green-300 mb-1">Sombra Pura</h4>
-              <p className="text-[10px] text-muted-foreground">Cores vivas e naturais. Ser livre de corrupção. Exemplos: verde floresta, dourado solar.</p>
+              <h4 className="text-sm font-semibold text-green-300 mb-1">Sombra Pura</h4>
+              <p className="text-xs text-muted-foreground">Cores vivas e naturais. Ser livre de corrupção. Exemplos: verde floresta, dourado solar.</p>
             </div>
             <div className="bg-amber-950/20 rounded p-3 border border-amber-900/30">
-              <h4 className="text-xs font-semibold text-amber-300 mb-1">Sombra Maculada</h4>
-              <p className="text-[10px] text-muted-foreground">Manchas escuras e distorções. Corrupção significativa mas não fatal.</p>
+              <h4 className="text-sm font-semibold text-amber-300 mb-1">Sombra Maculada</h4>
+              <p className="text-xs text-muted-foreground">Manchas escuras e distorções. Corrupção significativa mas não fatal.</p>
             </div>
             <div className="bg-red-950/20 rounded p-3 border border-red-900/30">
-              <h4 className="text-xs font-semibold text-red-300 mb-1">Sombra Corrompida</h4>
-              <p className="text-[10px] text-muted-foreground">Quase toda negra. Abominação iminente. Marcas físicas visíveis.</p>
+              <h4 className="text-sm font-semibold text-red-300 mb-1">Sombra Corrompida</h4>
+              <p className="text-xs text-muted-foreground">Quase toda negra. Abominação iminente. Marcas físicas visíveis.</p>
             </div>
             <div className="bg-gray-800/40 rounded p-3 border border-gray-700/30">
-              <h4 className="text-xs font-semibold text-gray-300 mb-1">Sombra Morta</h4>
-              <p className="text-[10px] text-muted-foreground">Completamente negra. Mortos-vivos e abominações. Sem retorno.</p>
+              <h4 className="text-sm font-semibold text-gray-300 mb-1">Sombra Morta</h4>
+              <p className="text-xs text-muted-foreground">Completamente negra. Mortos-vivos e abominações. Sem retorno.</p>
             </div>
           </div>
         </CardContent>
@@ -274,18 +274,18 @@ export default function CorruptionSection() {
                 className={`border-l-4 ${trad.color} ${trad.bgColor} rounded-r p-4`}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-bold text-sm text-foreground">{trad.name}</h4>
-                  <span className="text-[10px] text-muted-foreground bg-secondary px-2 py-0.5 rounded">{trad.origin}</span>
+                  <h4 className="font-bold text-base text-foreground">{trad.name}</h4>
+                  <span className="text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded">{trad.origin}</span>
                 </div>
-                <p className="text-[11px] text-foreground/80 mb-2">{trad.desc}</p>
+                <p className="text-sm text-foreground/80 mb-2">{trad.desc}</p>
                 <div className="flex flex-col md:flex-row gap-2">
                   <div className="bg-secondary/40 rounded px-2 py-1 flex-1">
-                    <span className="text-[9px] text-amber-300 font-semibold">Corrupção: </span>
-                    <span className="text-[9px] text-muted-foreground">{trad.corruptionNote}</span>
+                    <span className="text-xs text-amber-300 font-semibold">Corrupção: </span>
+                    <span className="text-xs text-muted-foreground">{trad.corruptionNote}</span>
                   </div>
                   <div className="bg-secondary/40 rounded px-2 py-1 flex-1">
-                    <span className="text-[9px] text-purple-300 font-semibold">Poderes: </span>
-                    <span className="text-[9px] text-muted-foreground">{trad.powers}</span>
+                    <span className="text-xs text-purple-300 font-semibold">Poderes: </span>
+                    <span className="text-xs text-muted-foreground">{trad.powers}</span>
                   </div>
                 </div>
               </motion.div>

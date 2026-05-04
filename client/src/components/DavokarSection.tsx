@@ -63,7 +63,7 @@ export default function DavokarSection() {
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-950/20 rounded-md p-4 border border-green-900/30">
                   <h4 className="font-semibold text-green-300 text-sm mb-2">Perigos</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
+                  <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Frutas venenosas disfarçadas de comestíveis</li>
                     <li>• Atoleiros disfarçados de chão sólido</li>
                     <li>• Plantas carnívoras e vinhas com sede de sangue</li>
@@ -73,7 +73,7 @@ export default function DavokarSection() {
                 </div>
                 <div className="bg-green-950/20 rounded-md p-4 border border-green-900/30">
                   <h4 className="font-semibold text-green-300 text-sm mb-2">Criaturas</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
+                  <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Pesadelinos e Jakaars em bandos</li>
                     <li>• Segue-rebanhos (aranhas)</li>
                     <li>• Trolls furiosos</li>
@@ -104,7 +104,7 @@ export default function DavokarSection() {
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-amber-950/20 rounded-md p-4 border border-amber-900/30">
                   <h4 className="font-semibold text-amber-300 text-sm mb-2">Natureza</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
+                  <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Floresta primeva verde escura e cerrada</li>
                     <li>• Frutas letais disfarçadas</li>
                     <li>• Abismos sob riachos aparentemente calmos</li>
@@ -114,7 +114,7 @@ export default function DavokarSection() {
                 </div>
                 <div className="bg-amber-950/20 rounded-md p-4 border border-amber-900/30">
                   <h4 className="font-semibold text-amber-300 text-sm mb-2">Criaturas</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
+                  <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Abominações com fome insaciável</li>
                     <li>• Grupos de trolls furiosos e gigantes</li>
                     <li>• Colônias de segue-rebanhos e morde-crânios</li>
@@ -141,7 +141,7 @@ export default function DavokarSection() {
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-red-950/20 rounded-md p-4 border border-red-900/30">
                   <h4 className="font-semibold text-red-300 text-sm mb-2">Horrores Naturais</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
+                  <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Mares de espinhos intransponíveis</li>
                     <li>• Florestas petrificadas</li>
                     <li>• Poças de água preta espessa</li>
@@ -153,7 +153,7 @@ export default function DavokarSection() {
                 </div>
                 <div className="bg-red-950/20 rounded-md p-4 border border-red-900/30">
                   <h4 className="font-semibold text-red-300 text-sm mb-2">Criaturas</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
+                  <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Elfos guerreiros pálidos como ossos</li>
                     <li>• Guarda da Ira de Symbaroum</li>
                     <li>• Monstros-sapo possuídos (2x tamanho humano)</li>
@@ -311,8 +311,8 @@ export default function DavokarSection() {
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-secondary/30 rounded p-3 border border-border">
-              <h4 className="text-xs font-bold text-green-300 mb-2">Na Periferia</h4>
-              <ul className="text-xs text-muted-foreground space-y-1">
+              <h4 className="text-sm font-bold text-green-300 mb-2">Na Periferia</h4>
+              <ul className="text-sm text-muted-foreground space-y-1">
                 <li>• Rotas entre Forte do Cardo e Karvosti são patrulhadas</li>
                 <li>• Possível cavalgar, embora sem boa velocidade</li>
                 <li>• Máximo 3-4 km/dia dependendo do terreno</li>
@@ -320,8 +320,8 @@ export default function DavokarSection() {
               </ul>
             </div>
             <div className="bg-secondary/30 rounded p-3 border border-border">
-              <h4 className="text-xs font-bold text-red-300 mb-2">Nas Profundezas</h4>
-              <ul className="text-xs text-muted-foreground space-y-1">
+              <h4 className="text-sm font-bold text-red-300 mb-2">Nas Profundezas</h4>
+              <ul className="text-sm text-muted-foreground space-y-1">
                 <li>• Cavalgar raramente é opção — animais fogem de trolls</li>
                 <li>• Nunca vá sem vários companheiros armados</li>
                 <li>• Leve um guia que saiba encontrar água limpa</li>

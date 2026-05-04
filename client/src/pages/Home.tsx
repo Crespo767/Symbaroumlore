@@ -181,21 +181,21 @@ export default function Home() {
 
           <div className="max-w-2xl mx-auto space-y-3">
             <div className="bg-amber-950/20 border border-amber-900/30 rounded-lg p-4">
-              <p className="text-[11px] text-amber-200/70 font-medium mb-2">⚠️ Material de Fã, Não Oficial</p>
-              <p className="text-[10px] leading-relaxed">
+              <p className="text-sm text-amber-200/70 font-medium mb-2">⚠️ Material de Fã, Não Oficial</p>
+              <p className="text-sm leading-relaxed">
                 Este compêndio é um projeto de fã sem fins lucrativos, criado apenas como ferramenta de referência para jogadores. 
                 Não substitui os livros oficiais e não contém informações exclusivas do Mestre de Jogo.
               </p>
             </div>
 
-            <p className="text-[10px] leading-relaxed">
+            <p className="text-sm leading-relaxed">
               <strong className="text-foreground/80">Symbaroum™</strong> é um jogo de RPG criado por{" "}
               <strong className="text-foreground/80">Mattias Johnsson Haake</strong> e{" "}
               <strong className="text-foreground/80">Mattias Lilja</strong>.
               Todos os direitos reservados a{" "}
               <strong className="text-foreground/80">Free League Publishing (Fria Ligan AB)</strong>.
             </p>
-            <p className="text-[10px] leading-relaxed">
+            <p className="text-sm leading-relaxed">
               Symbaroum é publicado no Brasil pela{" "}
               <strong className="text-foreground/80">Tria Editora</strong>, que oficializou parceria com a Free League Publishing 
               em 2023, sendo responsável pelos lançamentos do livro básico, guias avançados, bestiários e suplementos de cenário em português.
@@ -205,12 +205,12 @@ export default function Home() {
               href="https://triaeditora.com.br/loja/symbaroum/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-900/40 border border-amber-700/50 text-amber-200 text-xs font-medium hover:bg-amber-900/60 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-900/40 border border-amber-700/50 text-amber-200 text-sm font-medium hover:bg-amber-900/60 transition-all duration-300"
             >
               🛒 Compre os livros oficiais na Tria Editora
             </a>
 
-            <p className="text-[9px] text-muted-foreground/60 mt-4">
+            <p className="text-xs text-muted-foreground/60 mt-4">
               Baseado nos livros oficiais publicados pela Free League Publishing e Tria Editora.
               <br />
               Nenhum conteúdo, arte ou texto dos livros oficiais foi reproduzido integralmente. 

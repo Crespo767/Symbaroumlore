@@ -21,10 +21,10 @@ const attributes = [
 ];
 
 const archetypes = [
-  { name: "Guerreiro", color: "#ef4444", ability: "Façanha de Força", desc: "Combatentes de linha de frente. Mestres de armas e armaduras. Dominam o campo de batalha com força bruta e técnica marcial.", occupations: "Cavaleiro, Guarda da Ira*, Templário*" },
-  { name: "Caçador", color: "#22c55e", ability: "Instinto do Caçador", desc: "Especialistas em combate à distância e rastreamento. Sobrevivem na natureza selvagem e caçam qualquer presa.", occupations: "Caçador de Monstros, Caçador de Recompensas, Jurado do Ferro*" },
-  { name: "Ladino", color: "#8b5cf6", ability: "Golpe Baixo", desc: "Mestres da furtividade e astúcia. Sobrevivem pela esperteza, exploram fraquezas e atacam quando menos se espera.", occupations: "Ladrão, Espião, Explorador" },
-  { name: "Místico", color: "#f59e0b", ability: "Dom Poderoso", desc: "Praticantes de magia e rituais. Canalizam forças sobrenaturais através de tradições místicas ancestrais.", occupations: "Bruxo, Magista, Teurgo, Necromante*, Piromante*, Tecelã Verde*" },
+  { name: "Guerreiro", color: "#ef4444", ability: "Façanha de Força", desc: "Combatentes de linha de frente. Mestres de armas e armaduras. Dominam o campo de batalha com força bruta e técnica marcial.", occupations: "Berserker, Capitão, Cavaleiro, Duelista, Mercenário" },
+  { name: "Caçador", color: "#22c55e", ability: "Instinto do Caçador", desc: "Introduzido no Guia Avançado. Especialistas em combate à distância e rastreamento. Sobrevivem na natureza selvagem e caçam qualquer presa.", occupations: "Bruxo-caçador, Caçador de Recompensas, Explorador de Ferrugem" },
+  { name: "Ladino", color: "#8b5cf6", ability: "Golpe Baixo", desc: "Mestres da furtividade e astúcia. Sobrevivem pela esperteza, exploram fraquezas e atacam quando menos se espera.", occupations: "Batedor, Charlatão, Espião, Ladrão, Ocultista" },
+  { name: "Místico", color: "#f59e0b", ability: "Dom Poderoso", desc: "Praticantes de magia e rituais. Canalizam forças sobrenaturais através de tradições místicas ancestrais.", occupations: "Bruxo, Feiticeiro, Magista, Simbolista, Teurgo" },
 ];
 
 const radarData = attributes.map(a => ({ subject: a.abbr, A: 10, fullMark: 15 }));
@@ -132,9 +132,9 @@ export default function GameSystemSection() {
             <div className="grid grid-cols-2 gap-2">
               {attributes.map((attr) => (
                 <div key={attr.name} className="bg-secondary/30 rounded p-2">
-                  <span className="text-sm font-bold text-amber-300">{attr.abbr}</span>
-                  <p className="text-sm text-foreground/80">{attr.name}</p>
-                  <p className="text-xs text-muted-foreground">{attr.desc}</p>
+                  <span className="text-base font-bold text-amber-300">{attr.abbr}</span>
+                  <p className="text-sm font-semibold text-foreground/80">{attr.name}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{attr.desc}</p>
                 </div>
               ))}
             </div>
@@ -170,7 +170,7 @@ export default function GameSystemSection() {
                     className="bg-secondary/30 rounded p-3 border border-border"
                   >
                     <h4 className="text-sm font-bold text-amber-300 mb-1">{item.step}</h4>
-                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -178,11 +178,11 @@ export default function GameSystemSection() {
               <div className="grid sm:grid-cols-2 gap-3 pt-2">
                 <div className="bg-red-950/20 rounded p-3 border border-red-900/30">
                   <h4 className="text-sm font-bold text-red-300 mb-1">Ataque Livre</h4>
-                  <p className="text-xs text-muted-foreground">Ao se afastar de um inimigo em corpo a corpo ou ao passar por um inimigo com arma Longa, o inimigo recebe um ataque gratuito.</p>
+                  <p className="text-sm text-muted-foreground">Ao se afastar de um inimigo em corpo a corpo ou ao passar por um inimigo com arma Longa, o inimigo recebe um ataque gratuito.</p>
                 </div>
                 <div className="bg-amber-950/20 rounded p-3 border border-amber-900/30">
                   <h4 className="text-sm font-bold text-amber-300 mb-1">Limiar de Dor</h4>
-                  <p className="text-xs text-muted-foreground">Quando a Vitalidade cai abaixo do Limiar de Dor, todas as rolagens ganham uma segunda chance de falha (role duas vezes, use o pior).</p>
+                  <p className="text-sm text-muted-foreground">Quando a Vitalidade cai abaixo do Limiar de Dor, todas as rolagens ganham uma segunda chance de falha (role duas vezes, use o pior).</p>
                 </div>
               </div>
             </div>
@@ -205,12 +205,11 @@ export default function GameSystemSection() {
                   </div>
                   <div>
                     <h4 className="font-bold text-base text-foreground">{arch.name}</h4>
-                    <span className="text-xs text-amber-300">Habilidade: {arch.ability}</span>
+                    <span className="text-sm text-amber-300">Habilidade: {arch.ability}</span>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">{arch.desc}</p>
-                <p className="text-xs text-muted-foreground"><strong className="text-foreground">Ocupações:</strong> {arch.occupations}</p>
-                <p className="text-xs text-muted-foreground mt-1 italic">* = Profissão (habilidades exclusivas)</p>
+                <p className="text-sm text-muted-foreground"><strong className="text-foreground">Ocupações:</strong> {arch.occupations}</p>
               </div>
             ))}
           </div>
@@ -226,7 +225,7 @@ export default function GameSystemSection() {
           <div className="grid md:grid-cols-3 gap-4">
             <div>
               <h4 className="text-sm font-bold text-green-300 mb-2">Ações de Movimento</h4>
-              <div className="space-y-1 text-xs text-muted-foreground">
+              <div className="space-y-1 text-sm text-muted-foreground">
                 <p>• Mover-se ~10 metros</p>
                 <p>• Levantar-se do chão</p>
                 <p>• Sacar/guardar arma</p>
@@ -236,7 +235,7 @@ export default function GameSystemSection() {
             </div>
             <div>
               <h4 className="text-sm font-bold text-blue-300 mb-2">Ações de Combate</h4>
-              <div className="space-y-1 text-xs text-muted-foreground">
+              <div className="space-y-1 text-sm text-muted-foreground">
                 <p>• Atacar (corpo a corpo ou distância)</p>
                 <p>• Usar habilidade ativa</p>
                 <p>• Usar poder místico ativo</p>
@@ -246,7 +245,7 @@ export default function GameSystemSection() {
             </div>
             <div>
               <h4 className="text-sm font-bold text-purple-300 mb-2">Ações Livres/Reações</h4>
-              <div className="space-y-1 text-xs text-muted-foreground">
+              <div className="space-y-1 text-sm text-muted-foreground">
                 <p>• Defender-se (reação automática)</p>
                 <p>• Falar brevemente</p>
                 <p>• Usar poder de Reação</p>
@@ -267,19 +266,19 @@ export default function GameSystemSection() {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-secondary/30 rounded p-3">
               <h4 className="text-sm font-bold text-foreground mb-2">Descanso Curto (1 cena)</h4>
-              <p className="text-xs text-muted-foreground">Corrupção temporária é removida ao final de cada cena. Não cura Vitalidade automaticamente.</p>
+              <p className="text-sm text-muted-foreground">Corrupção temporária é removida ao final de cada cena. Não cura Vitalidade automaticamente.</p>
             </div>
             <div className="bg-secondary/30 rounded p-3">
               <h4 className="text-sm font-bold text-foreground mb-2">Descanso Longo (noite)</h4>
-              <p className="text-xs text-muted-foreground">Recupera toda a Vitalidade com descanso adequado. Sem descanso adequado: recupera apenas metade.</p>
+              <p className="text-sm text-muted-foreground">Recupera toda a Vitalidade com descanso adequado. Sem descanso adequado: recupera apenas metade.</p>
             </div>
             <div className="bg-secondary/30 rounded p-3">
               <h4 className="text-sm font-bold text-foreground mb-2">Morte</h4>
-              <p className="text-xs text-muted-foreground">Vitalidade 0 = inconsciente. Sem ajuda em tempo: morte. Habilidade Médico pode estabilizar.</p>
+              <p className="text-sm text-muted-foreground">Vitalidade 0 = inconsciente. Sem ajuda em tempo: morte. Habilidade Médico pode estabilizar.</p>
             </div>
             <div className="bg-secondary/30 rounded p-3">
               <h4 className="text-sm font-bold text-foreground mb-2">Cura Mística</h4>
-              <p className="text-xs text-muted-foreground">Poderes como Imposição de Mãos e elixires de cura restauram Vitalidade imediatamente.</p>
+              <p className="text-sm text-muted-foreground">Poderes como Imposição de Mãos e elixires de cura restauram Vitalidade imediatamente.</p>
             </div>
           </div>
         </CardContent>

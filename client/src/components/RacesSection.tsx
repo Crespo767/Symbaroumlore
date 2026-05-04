@@ -144,7 +144,7 @@ export default function RacesSection() {
                   <h3 className="text-lg font-bold text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                     {race.name}
                   </h3>
-                  <span className={`text-[9px] px-1.5 py-0.5 rounded ${
+                  <span className={`text-xs px-1.5 py-0.5 rounded ${
                     race.source === "Avançado" ? "bg-purple-900/40 text-purple-300" : "bg-green-900/40 text-green-300"
                   }`}>
                     {race.source}
@@ -152,23 +152,23 @@ export default function RacesSection() {
                 </div>
                 <div className="flex flex-wrap gap-1.5 mb-3">
                   {race.traits.map((trait) => (
-                    <span key={trait} className="text-[10px] px-2 py-0.5 rounded bg-amber-900/30 text-amber-200 border border-amber-800/40">
+                    <span key={trait} className="text-xs px-2 py-0.5 rounded bg-amber-900/30 text-amber-200 border border-amber-800/40">
                       {trait}
                     </span>
                   ))}
                 </div>
-                <p className="text-[12px] text-foreground/85 leading-relaxed mb-3">
+                <p className="text-sm text-foreground/85 leading-relaxed mb-3">
                   {race.description}
                 </p>
                 <div className="bg-secondary/50 rounded p-3 mb-2">
-                  <h4 className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">Cultura</h4>
-                  <p className="text-[11px] text-muted-foreground leading-relaxed">
+                  <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Cultura</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {race.culture}
                   </p>
                 </div>
                 <div className="bg-secondary/30 rounded p-2">
-                  <h4 className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-0.5">Atributos Sugeridos</h4>
-                  <p className="text-[10px] text-muted-foreground">{race.attributes}</p>
+                  <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-0.5">Atributos Sugeridos</h4>
+                  <p className="text-sm text-muted-foreground">{race.attributes}</p>
                 </div>
               </CardContent>
             </Card>
@@ -185,19 +185,19 @@ export default function RacesSection() {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-emerald-950/20 rounded p-3 border border-emerald-900/30">
               <h4 className="text-sm font-semibold text-emerald-300 mb-1">Ciclo Élfico</h4>
-              <p className="text-[10px] text-muted-foreground leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 Primavera (jovem, curioso) → Verão (guerreiro, no auge) → Outono (sábio, melancólico) → Inverno (antigo, temível). Cada estação dura séculos.
               </p>
             </div>
             <div className="bg-orange-950/20 rounded p-3 border border-orange-900/30">
               <h4 className="text-sm font-semibold text-orange-300 mb-1">Evolução Goblin→Troll</h4>
-              <p className="text-[10px] text-muted-foreground leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 Goblins podem entrar em crisálida e emergir como trolls, um processo raro e misterioso. Trolls vivem séculos e crescem continuamente.
               </p>
             </div>
             <div className="bg-gray-800/40 rounded p-3 border border-gray-700/30">
               <h4 className="text-sm font-semibold text-gray-300 mb-1">Despertar Morto-Vivo</h4>
-              <p className="text-[10px] text-muted-foreground leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 Fenômeno recente sem explicação. A pessoa morre e desperta com mente intacta mas corpo morto. Corrupção total mas livre arbítrio preservado.
               </p>
             </div>

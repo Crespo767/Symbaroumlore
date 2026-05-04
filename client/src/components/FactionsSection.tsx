@@ -171,20 +171,20 @@ export default function FactionsSection() {
           </h3>
           <div className="grid md:grid-cols-2 gap-3">
             <div className="bg-secondary/30 rounded p-3 border border-border">
-              <h4 className="text-xs font-bold text-foreground mb-1">Ambria vs. Clãs Bárbaros</h4>
-              <p className="text-[10px] text-muted-foreground">Ambria expande para terras bárbaras. Dois clãs já foram destruídos/integrados. Alguns clãs cooperam, outros resistem. As bruxas podem decidir o equilíbrio.</p>
+              <h4 className="text-sm font-bold text-foreground mb-1">Ambria vs. Clãs Bárbaros</h4>
+              <p className="text-xs text-muted-foreground">Ambria expande para terras bárbaras. Dois clãs já foram destruídos/integrados. Alguns clãs cooperam, outros resistem. As bruxas podem decidir o equilíbrio.</p>
             </div>
             <div className="bg-secondary/30 rounded p-3 border border-border">
-              <h4 className="text-xs font-bold text-foreground mb-1">Igreja vs. Ordo Magica</h4>
-              <p className="text-[10px] text-muted-foreground">Disputam jurisdição sobre assuntos místicos. A Igreja depende de fé; a Ordo de filosofia e evidências. Teurgos e Mantos Negros desconfiam dos mestres da Ordo.</p>
+              <h4 className="text-sm font-bold text-foreground mb-1">Igreja vs. Ordo Magica</h4>
+              <p className="text-xs text-muted-foreground">Disputam jurisdição sobre assuntos místicos. A Igreja depende de fé; a Ordo de filosofia e evidências. Teurgos e Mantos Negros desconfiam dos mestres da Ordo.</p>
             </div>
             <div className="bg-secondary/30 rounded p-3 border border-border">
-              <h4 className="text-xs font-bold text-foreground mb-1">Elfos vs. Humanos</h4>
-              <p className="text-[10px] text-muted-foreground">O Pacto de Ferro proíbe exploração profunda. Elfos matam violadores. Ambria ignora o tratado. Os bárbaros ficam presos entre os dois lados.</p>
+              <h4 className="text-sm font-bold text-foreground mb-1">Elfos vs. Humanos</h4>
+              <p className="text-xs text-muted-foreground">O Pacto de Ferro proíbe exploração profunda. Elfos matam violadores. Ambria ignora o tratado. Os bárbaros ficam presos entre os dois lados.</p>
             </div>
             <div className="bg-secondary/30 rounded p-3 border border-border">
-              <h4 className="text-xs font-bold text-foreground mb-1">Intrigas na Nobreza</h4>
-              <p className="text-[10px] text-muted-foreground">O tio da Rainha, Alesaro, ressente ter perdido o trono. Primos incompetentes. A mãe gravemente doente. As casas nobres buscam oportunidades para ganhar poder.</p>
+              <h4 className="text-sm font-bold text-foreground mb-1">Intrigas na Nobreza</h4>
+              <p className="text-xs text-muted-foreground">O tio da Rainha, Alesaro, ressente ter perdido o trono. Primos incompetentes. A mãe gravemente doente. As casas nobres buscam oportunidades para ganhar poder.</p>
             </div>
           </div>
         </CardContent>
@@ -212,7 +212,7 @@ export default function FactionsSection() {
                     {faction.description}
                   </p>
                   <div className={`${faction.bgColor} rounded p-3`}>
-                    <ul className="text-xs text-muted-foreground space-y-1">
+                    <ul className="text-sm text-muted-foreground space-y-1">
                       {faction.details.map((detail, i) => (
                         <li key={i}>• {detail}</li>
                       ))}

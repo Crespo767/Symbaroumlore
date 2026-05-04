@@ -180,7 +180,7 @@ export default function TimelineSection() {
                 <div className={`absolute left-3 md:left-5 top-4 w-3 h-3 rounded-full ${typeDotColors[event.type]} ring-2 ring-background`} />
                 
                 <div className={`border-l-4 rounded-r-md p-4 ${typeColors[event.type]}`}>
-                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                     {event.year}
                   </span>
                   <h4 className="text-base font-bold text-foreground mt-1">{event.title}</h4>

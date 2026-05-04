@@ -225,7 +225,7 @@ export default function LocationsSection() {
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {loc.features.map((feat) => (
-                    <span key={feat} className="text-[10px] px-2 py-0.5 rounded bg-secondary text-muted-foreground border border-border">
+                    <span key={feat} className="text-xs px-2 py-0.5 rounded bg-secondary text-muted-foreground border border-border">
                       {feat}
                     </span>
                   ))}

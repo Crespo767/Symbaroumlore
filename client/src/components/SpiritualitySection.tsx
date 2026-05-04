@@ -38,13 +38,13 @@ export default function SpiritualitySection() {
             <h4 className="font-semibold text-amber-300 text-sm mb-2 flex items-center gap-2">
               <Flame className="w-4 h-4" /> O Sol Moribundo
             </h4>
-            <p className="text-xs text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               De acordo com a Igreja, o homem vem negligenciando seu dever há muito tempo, o que significa que 
               <strong className="text-amber-200"> Prios perdeu muito de Sua força</strong>, tanta que está, na verdade, morrendo. 
               Mas ainda há esperança: se os humanos trabalharem duro, extraírem mais colheitas do solo, 
               colherem mais recursos das florestas e montanhas, e colonizarem mais ermos, então Prios ficará forte novamente.
             </p>
-            <p className="text-xs text-muted-foreground leading-relaxed mt-2">
+            <p className="text-sm text-muted-foreground leading-relaxed mt-2">
               Nessa missão, Davokar é vital. A floresta selvagem é considerada o exemplo perfeito do que acontece 
               quando os humanos não fazem o que são obrigados a fazer. <strong className="text-amber-200">Davokar deve ser purificada</strong>, 
               sua potência disciplinada e seus recursos cultivados.
@@ -97,7 +97,7 @@ export default function SpiritualitySection() {
           <div className="grid md:grid-cols-2 gap-3 mt-4">
             <div className="bg-green-950/20 rounded-md p-3 border border-green-900/30">
               <h4 className="font-semibold text-green-300 text-sm mb-2">Divindades Conhecidas</h4>
-              <ul className="text-xs text-muted-foreground space-y-1.5">
+              <ul className="text-sm text-muted-foreground space-y-1.5">
                 <li>• <strong className="text-green-200">Uron</strong> (clã Gaoia): deus serpente, similar à Mãe Terra ambriana</li>
                 <li>• <strong className="text-green-200">Arex</strong> (clã Baiaga): lobo de sangue, similar ao Desbravador</li>
                 <li>• <strong className="text-green-200">Oroke</strong> (muitos clãs): a aranha, similar ao Executor</li>
@@ -106,7 +106,7 @@ export default function SpiritualitySection() {
             </div>
             <div className="bg-green-950/20 rounded-md p-3 border border-green-900/30">
               <h4 className="font-semibold text-green-300 text-sm mb-2">Práticas</h4>
-              <ul className="text-xs text-muted-foreground space-y-1.5">
+              <ul className="text-sm text-muted-foreground space-y-1.5">
                 <li>• Adoração de ancestrais e solos sagrados</li>
                 <li>• Sessões de orações coletivas até costumes mortais</li>
                 <li>• Enoais se deixam picar por aranhas venenosas (mais perto de Oroke)</li>
@@ -116,7 +116,7 @@ export default function SpiritualitySection() {
           </div>
           <div className="bg-green-950/30 rounded-md p-4 border border-green-900/40 mt-2">
             <h4 className="font-semibold text-green-300 text-sm mb-2">As Bruxas e a Huldra</h4>
-            <p className="text-xs text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               A líder das bruxas é a <strong className="text-green-200">Huldra Yeleta</strong>, que reside em Karvosti junto do Alto Chefe. 
               Quatro vezes por ano, nos solstícios e equinócios, ela reúne as <strong className="text-green-200">Guardiãs</strong>, 
               as líderes dos nodos de encantos de cada clã. Os encontros discutem o estado da Davokar e buscam soluções para conflitos. 
@@ -141,7 +141,7 @@ export default function SpiritualitySection() {
             de acordo com eles, habitam todos os aspectos da natureza.
           </p>
           <div className="bg-purple-950/20 rounded-md p-4 border border-purple-900/30">
-            <ul className="text-xs text-muted-foreground space-y-2">
+            <ul className="text-sm text-muted-foreground space-y-2">
               <li>• Agradecem ao <strong className="text-purple-200">rio</strong> por deixá-los atravessar suas águas rápidas incólumes</li>
               <li>• Oferecem gratidão à <strong className="text-purple-200">castanheira</strong> por deixar suas castanhas caírem</li>
               <li>• Sussurram agradecimentos ao <strong className="text-purple-200">veado</strong> por se permitir ser capturado</li>
@@ -171,14 +171,14 @@ export default function SpiritualitySection() {
           </p>
           <div className="grid md:grid-cols-2 gap-3">
             <div className="bg-red-950/20 rounded-md p-3 border border-red-900/30 space-y-2">
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Evite as encostas do Cume da Cripta</strong>, onde Grabando descansa em sono leve e não deve ser perturbado</p>
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Não mencione a Andarilha do Água Branca pelo nome</strong>, pois ela ouvirá seu chamado e responderá com força</p>
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Nunca devore os frutos do Sino Vermelho</strong>, pois seu néctar é maculado e planta a corrupção</p>
+              <p className="text-sm text-muted-foreground">⚠️ <strong>Evite as encostas do Cume da Cripta</strong>, onde Grabando descansa em sono leve e não deve ser perturbado</p>
+              <p className="text-sm text-muted-foreground">⚠️ <strong>Não mencione a Andarilha do Água Branca pelo nome</strong>, pois ela ouvirá seu chamado e responderá com força</p>
+              <p className="text-sm text-muted-foreground">⚠️ <strong>Nunca devore os frutos do Sino Vermelho</strong>, pois seu néctar é maculado e planta a corrupção</p>
             </div>
             <div className="bg-red-950/20 rounded-md p-3 border border-red-900/30 space-y-2">
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Nunca beba da água cor-de-arco-íris</strong>, pois ela agrava a sede e prejudica a saúde</p>
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Não ouça a canção de gargantas não vistas</strong>, isso é um aviso, não um chamado</p>
-              <p className="text-xs text-muted-foreground italic mt-2">Cada clã tem seus próprios tabus. Violar os éditos ditados pela Huldra traz consequências terríveis.</p>
+              <p className="text-sm text-muted-foreground">⚠️ <strong>Nunca beba da água cor-de-arco-íris</strong>, pois ela agrava a sede e prejudica a saúde</p>
+              <p className="text-sm text-muted-foreground">⚠️ <strong>Não ouça a canção de gargantas não vistas</strong>, isso é um aviso, não um chamado</p>
+              <p className="text-sm text-muted-foreground italic mt-2">Cada clã tem seus próprios tabus. Violar os éditos ditados pela Huldra traz consequências terríveis.</p>
             </div>
           </div>
         </CardContent>
@@ -193,7 +193,7 @@ export default function SpiritualitySection() {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-3">
               <h4 className="text-sm font-bold text-green-300">Contadores de Histórias Bárbaros</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 O povo bárbaro valoriza um bom narrador quase tanto quanto um guerreiro talentoso. 
                 O Alto Chefe em Karvosti quase sempre tem um ou dois contadores de histórias selecionados. 
                 São escolhidos entre participantes do <strong className="text-green-200">desafio anual no equinócio de outono</strong> e têm 
@@ -202,7 +202,7 @@ export default function SpiritualitySection() {
             </div>
             <div className="space-y-3">
               <h4 className="text-sm font-bold text-blue-300">Artes Ambrianas</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Bardos, poetas, atores e dançarinos se apresentam em tavernas, restaurantes e estalagens. 
                 Representações da Grande Guerra são comuns. Contos sobre <strong className="text-blue-200">Portadores da Luz e Mártires</strong> são populares. 
                 Recentemente, contos da Davokar ganharam os palcos, de caçadores de fortunas, encontros com 
