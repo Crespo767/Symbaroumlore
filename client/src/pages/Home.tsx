@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -31,7 +31,13 @@ import SpiritualitySection from "@/components/SpiritualitySection";
 import ImageGallerySection from "@/components/ImageGallerySection";
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("historia");
+  const [activeSection, setActiveSection] = useState(() => {
+    return localStorage.getItem("symbaroum-active-section") || "historia";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("symbaroum-active-section", activeSection);
+  }, [activeSection]);
 
   const sections = [
     { id: "historia", label: "História", icon: BookOpen },
