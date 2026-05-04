@@ -9,9 +9,9 @@ const factions = [
     color: "text-blue-300",
     borderColor: "border-l-blue-600",
     bgColor: "bg-blue-950/20",
-    description: "Ambria é governada pela Rainha Korinthia e dividida em sete ducados. A Corte em Yndaros dita o ritmo do novo império, mas as intrigas entre as Casas Nobres ameaçam a frágil paz. Nobres famintos por glória e recursos lutam por influência na Cúria e na exploração da floresta.",
+    description: "Ambria é governada pela Rainha Korinthia e dividida em sete ducados. A Corte em Yndaros dita o ritmo do novo império, mas as intrigas entre as Casas Nobres ameaçam a frágil paz. Nobres famintos por glória e recursos lutam por influência na Cúria e na exploração de Davokar.",
     details: [
-      "Korinthia Kohinoor, a Matadora da Noite — venerada quase como divindade por seu povo. Resgatada dos Lordes Negros após perder sua juventude em cativeiro.",
+      "Korinthia Kohinoor, a Matadora da Noite — venerada quase como divindade. Resgatada dos Lordes Negros após anos de cativeiro na queda de Alberetor.",
       "Duque Alesaro Kohinoor (Nova Berendoria) — tio de Korinthia que ressentidamente esperava herdar o trono durante a prisão dela.",
       "Duquesa Esmerelda (Kasandrien) — meia-irmã mais nova de Korinthia, sede da Ordo Magica em Agrella.",
       "Duque Ynedar (Nova Beretor) — sobrinho da Rainha, jovem líder com visão diplomática, mantendo boas relações com os bárbaros de Odaiova.",
@@ -26,10 +26,10 @@ const factions = [
     bgColor: "bg-amber-950/20",
     description: "Durante a Grande Guerra, o Sol tornou-se o Uno e o Doador das Leis. A Igreja prega que Prios está morrendo pela negligência humana, e a Davokar deve ser expurgada e cultivada para reavivar Sua chama. A Igreja de Prios governa um domínio próprio tão rico quanto um ducado.",
     details: [
-      "Primeiro Padre Jeseebegai (nascido Demeon Soleij) — cego, marcado e ferrenho líder da Cúria, herói que encontrou e libertou Korinthia.",
-      "Templários (Cavaleiros do Sol Moribundo) — o braço armado e implacável da Igreja, liderado pelo Comandante Iakobo Vearra.",
-      "Frades do Crepúsculo (Mantos Negros) — a Inquisição secreta, operando em silêncio sob a égide do Irmão Eumenos. Eles não reportam ao Primeiro Padre, mas mantêm autonomia perigosa.",
-      "A Cúria possui jurisdição absoluta sobre a moral e financia as 'Cruzadas' não oficiais contra feitiçaria e abominações."
+      "Primeiro Padre Jeseebegai — marcado e ferrenho líder da Cúria, herói que invadiu as trevas para libertar Korinthia. Vive sob paranoia crescente.",
+      "Templários (Cavaleiros do Sol Moribundo) — O braço armado, implacável e dogmático, liderado pelo Primeiro Comandante Iakobo Vearra.",
+      "Frades do Crepúsculo (Mantos Negros) — A temida Inquisição. Especialistas ocultos em demonologia sob a égide do Irmão Eumenos. Operam com grande autonomia.",
+      "A Igreja decreta Leis solares rígidas, financiando 'Cruzadas' não oficiais contra feitiçaria, cultos, elfos e abominações."
     ]
   },
   {
@@ -54,10 +54,10 @@ const factions = [
     bgColor: "bg-emerald-950/20",
     description: "Um antigo tratado e uma coalizão militar de elfos da Davokar. O Pacto alega que príncipes humanos assinaram o acordo com anéis de ferro para nunca adentrar a Davokar e não despertar os horrores de Symbaroum. Ambria ignora este tratado, o que resulta em mortes diárias.",
     details: [
-      "Emissário Elori — um dos poucos elfos em Yndaros, tolerado sob severa guarda militar. Ouve insultos diários na esperança de conter a expansão humana.",
-      "Aloéna — a mítica semideusa gigante que reside num bosque inacessível de Karvosti, de enorme poder místico.",
-      "O Pacto caça caçadores de tesouros incansavelmente usando Elfos do Verão (guerreiros plenos) treinados por séculos.",
-      "Sofrem uma tragédia populacional: cada elfo morto em combate não retorna do Inverno, reduzindo o número total da raça."
+      "Emissário Elori — Representante do Pacto isolado em Yndaros, tolerado pela Coroa mas assediado pelo povo e pela Igreja.",
+      "Príncipes Élficos — Os verdadeiros comandantes da floresta, liderando forças de Elfos do Verão para abater invasores impiedosamente.",
+      "Aloéna — Uma figura misteriosa e semideusa gigante que reside no bosque de Karvosti; mais antiga que os próprios elfos, ela é o coração místico da floresta.",
+      "O Pacto sofre uma tragédia demográfica constante: seu número é finito e cada elfo morto em combate não pode ser reposto facilmente."
     ]
   },
   {
@@ -66,13 +66,14 @@ const factions = [
     color: "text-green-300",
     borderColor: "border-l-green-600",
     bgColor: "bg-green-950/20",
-    description: "Antes treze, agora onze clãs sobreviventes habitam as sombras e planícies. Eles são os vigias fronteiriços que sempre evitaram as ruínas perigosas através dos tabus mágicos das Bruxas. Estão em uma constante queda de braço com a civilização invasora.",
+    description: "Antes treze, agora onze clãs sobreviventes habitam as sombras e planícies da floresta. Eles são os vigias fronteiriços que sempre evitaram as ruínas perigosas através dos severos tabus das Bruxas. Estão em uma constante tensão política com a civilização invasora de Ambria.",
     details: [
-      "Huldra Yeleta — Líder suprema das Bruxas, sábia, pragmática, e temida tanto pelo seu povo quanto pela Coroa Ambriana.",
-      "Alto Chefe Tharaban — Reside em Karvosti, cercado pela sagrada 'Guarda da Ira'. Ele é mais um árbitro da paz entre clãs do que um rei conquistador.",
-      "Gaoia e Saar-Kahn — Clãs primitivos e isolados do norte, guiados por divindades profanas de sangue e de feras.",
-      "Karohar e Odaiova — Clãs próximos da fronteira, com Karohar extremamente hostil aos saques e Odaiova prosperando como mercadores.",
-      "Dois clãs originais foram dizimados: Kadiz (assimilado) e Jezora (destruído na Grande Guerra)."
+      "Líderes de Karvosti: A sábia Huldra Yeleta (líder das Bruxas) e o Alto Chefe Tharaban (árbitro e diplomata) tentam manter a união dos clãs a partir do penhasco sagrado.",
+      "Os Aliados (Odaiova, Zarek e Vajvod): Clãs mais dispostos a tolerar a presença de Ambria; Odaiova prospera no comércio e Vajvod vive nas distantes planícies leste.",
+      "A Linha de Frente (Karohar e Godeta): Clãs fronteiriços agressivos, enfrentando constantes escaramuças com lenhadores, patrulheiros e mercenários.",
+      "Os Isolados (Gaoia, Saar-Kaan, Varakko e Yedza): Povoam as profundezas do norte selvagem, adorando bestas ancestrais e divindades de sangue. Gaoia reverencia enormes serpentes-da-neve.",
+      "Os Selvagens do Coração (Baiaga e Enoai): Clãs perigosamente enraizados na floresta escura. Os Baiagas lutam lado a lado com grandes ursos, e os Enoais vivem escondidos no alto das copas das árvores.",
+      "Clãs Perdidos: Kadiz foi conquistado na Grande Guerra (formando a atual Velha Kadizar em Yndaros), enquanto o clã Jezora (liderado por Haloban) foi brutalmente aniquilado pelo aço ambriano."
     ]
   },
   {
@@ -109,12 +110,12 @@ const factions = [
     color: "text-red-300",
     borderColor: "border-l-red-600",
     bgColor: "bg-red-950/20",
-    description: "Um mal sussurrante e corrosivo. Nem uma facção unida, mas sim células independentes de ambrianos corrompidos, bruxos caídos e bestas de Symbaroum em busca de reviver o pesadelo do Antigo Império. Eles dominam a arte da feitiçaria, aceitando o abraço letal da Corrupção.",
+    description: "Um poder corrosivo e sombrio, não uma organização formal. Células de feitiçaria reúnem ex-cultistas de Alberetor, magos ambiciosos, bruxos isolados e feras de Symbaroum buscando reavivar velhos pesadelos.",
     details: [
-      "Operam sob ritos de sangue e sacrifício carnal nos esgotos de Yndaros e em refúgios esquecidos.",
-      "Simbaristas — estudiosos fanáticos que acreditam que dominar as Abominações lhes concederá imortalidade.",
-      "Cultistas dos Lordes Negros — agentes desertores que buscam reanimar os demônios da guerra que destruíram Alberetor.",
-      "São os alvos primários da Inquisição e até das Bruxas, pois sua simples existência envenena o tecido de Symbaroum."
+      "Operam sob ritos de sangue carnal e sacrifícios em locais profanos como os esgotos da Velha Kadizar.",
+      "Simbaristas — Feiticeiros estudiosos e radicais que tentam desvendar a carne das Abominações e os segredos imortais de Symbaroum.",
+      "Os Soberanos Negros (Lordes das Trevas) — Embora Alberetor tenha triunfado, os resquícios e adoradores desses tiranos corrompidos ainda envenenam o reino no subúrbio.",
+      "A Praga da Corrupção: A feitiçaria suga a vida da natureza, deformando e transformando magos descuidados em Abominações bestiais e mortais."
     ]
   },
   {
