@@ -10,7 +10,7 @@ const races = [
     source: "Básico",
     description: "O povo da Rainha Korinthia, organizado em uma civilização estruturada com nobreza, clero e povo comum. Nomes masculinos terminam em -o e femininos em -a; nobres usam sufixos como -gai, -goi ou -mei.",
     culture: "Civilização urbana, hierárquica. Valorizam ordem, lei e a fé em Prios. Buscam expandir seu domínio sobre as terras bárbaras e explorar as ruínas da Davokar.",
-    attributes: "Flexíveis — podem priorizar qualquer atributo dependendo da ocupação.",
+    attributes: "Flexíveis, podem priorizar qualquer atributo dependendo da ocupação.",
   },
   {
     name: "Humano (Bárbaro)",
@@ -62,7 +62,7 @@ const races = [
     traits: ["Herança Natural", "Memória Absoluta", "Pária"],
     color: "border-l-stone-400",
     source: "Avançado",
-    description: "Povo misterioso, possivelmente criado durante a era de Symbaroum. Família é o centro de tudo — clãs anões são extremamente unidos. Memória perfeita que se estende por gerações. Poucos em número, mas resilientes.",
+    description: "Povo misterioso, possivelmente criado durante a era de Symbaroum. Família é o centro de tudo, e os clãs anões são extremamente unidos. Memória perfeita que se estende por gerações. Poucos em número, mas resilientes.",
     culture: "Vivem em pequenos grupos familiares, frequentemente como artesãos ou comerciantes. Sua Memória Absoluta os torna excelentes arquivistas e historiadores. Desconfiados de estranhos, mas leais até a morte aos aliados.",
     attributes: "Vigoroso e Astuto altos. Bons artesãos e guerreiros resistentes.",
   },
@@ -81,7 +81,7 @@ const races = [
     color: "border-l-orange-600",
     source: "Avançado",
     description: "Seres poderosos do Submundo que evoluem de goblins através de uma crisálida misteriosa. Enormes e resistentes, com pele como casca de árvore. Podem viver séculos. Possuem uma cultura própria baseada no canto.",
-    culture: "Vivem nas profundezas da Davokar ou em cavernas. Possuem a tradição do Canto do Troll — magia expressa pela voz. São solitários mas não hostis. Alguns trolls são cantores lendários cujas vozes ecoam pela floresta.",
+    culture: "Vivem nas profundezas da Davokar ou em cavernas. Possuem a tradição do Canto do Troll, uma magia expressa pela voz. São solitários mas não hostis. Alguns trolls são cantores lendários cujas vozes ecoam pela floresta.",
     attributes: "Vigoroso extremamente alto. Podem ter Armadurado, Arma Natural, Regeneração ou Robusto como traços adicionais.",
   },
   {
@@ -89,7 +89,7 @@ const races = [
     traits: ["Totalmente Corrompido", "Livre Arbítrio"],
     color: "border-l-gray-500",
     source: "Avançado",
-    description: "Fenômeno recente e perturbador: pessoas que despertaram após a morte com mente intacta. Completamente corrompidos mas mantêm livre arbítrio e personalidade. Não são mortos-vivos tradicionais — são algo novo e inexplicável.",
+    description: "Fenômeno recente e perturbador: pessoas que despertaram após a morte com mente intacta. Completamente corrompidos mas mantêm livre arbítrio e personalidade. Não são mortos-vivos tradicionais, são algo novo e inexplicável.",
     culture: "Rejeitados por todos. A Igreja de Prios os considera abominações. Alguns buscam entender sua condição, outros simplesmente tentam existir. Sua Sombra é completamente negra, revelando sua natureza a qualquer um com Visão de Bruxa.",
     attributes: "Resoluto alto (necessário para manter a sanidade). Não precisam comer, dormir ou respirar.",
   },
@@ -192,7 +192,7 @@ export default function RacesSection() {
             <div className="bg-orange-950/20 rounded p-3 border border-orange-900/30">
               <h4 className="text-sm font-semibold text-orange-300 mb-1">Evolução Goblin→Troll</h4>
               <p className="text-[10px] text-muted-foreground leading-relaxed">
-                Goblins podem entrar em crisálida e emergir como trolls — um processo raro e misterioso. Trolls vivem séculos e crescem continuamente.
+                Goblins podem entrar em crisálida e emergir como trolls, um processo raro e misterioso. Trolls vivem séculos e crescem continuamente.
               </p>
             </div>
             <div className="bg-gray-800/40 rounded p-3 border border-gray-700/30">

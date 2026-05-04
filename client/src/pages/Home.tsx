@@ -94,7 +94,7 @@ export default function Home() {
             className="text-lg md:text-xl text-amber-200/80 max-w-2xl"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Guia Completo do Jogador — tudo que você precisa saber sobre o universo
+            Guia Completo do Jogador, tudo que você precisa saber sobre o universo
             de fantasia sombria sem spoilers
           </motion.p>
           <motion.div
@@ -103,7 +103,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.8 }}
             className="mt-4 text-xs text-amber-300/50 max-w-lg"
           >
-            Baseado no Livro Básico, Guia Avançado do Jogador, Tenebres e Sobre a Natureza de Davokar
+            Baseado nos livros oficiais publicados pela Free League e Tria Editora
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -175,7 +175,7 @@ export default function Home() {
 
           <div className="max-w-2xl mx-auto space-y-3">
             <div className="bg-amber-950/20 border border-amber-900/30 rounded-lg p-4">
-              <p className="text-[11px] text-amber-200/70 font-medium mb-2">⚠️ Material de Fã — Não Oficial</p>
+              <p className="text-[11px] text-amber-200/70 font-medium mb-2">⚠️ Material de Fã, Não Oficial</p>
               <p className="text-[10px] leading-relaxed">
                 Este compêndio é um projeto de fã sem fins lucrativos, criado apenas como ferramenta de referência para jogadores. 
                 Não substitui os livros oficiais e não contém informações exclusivas do Mestre de Jogo.
@@ -205,7 +205,7 @@ export default function Home() {
             </a>
 
             <p className="text-[9px] text-muted-foreground/60 mt-4">
-              Baseado no Livro Básico, Guia Avançado do Jogador, Tenebres e Sobre a Natureza de Davokar.
+              Baseado nos livros oficiais publicados pela Free League Publishing e Tria Editora.
               <br />
               Nenhum conteúdo, arte ou texto dos livros oficiais foi reproduzido integralmente. 
               Todo conteúdo aqui é resumo e interpretação para fins educacionais.

@@ -22,7 +22,7 @@ export default function SpiritualitySection() {
           <div className="flex items-center gap-3">
             <Sun className="w-6 h-6 text-amber-300" />
             <h3 className="text-xl font-bold text-amber-200" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Prios — O Deus Sol, O Uno
+              Prios, O Deus Sol, O Uno
             </h3>
           </div>
           <p className="text-sm text-foreground/90 leading-relaxed">
@@ -40,7 +40,7 @@ export default function SpiritualitySection() {
             </h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
               De acordo com a Igreja, o homem vem negligenciando seu dever há muito tempo, o que significa que 
-              <strong className="text-amber-200"> Prios perdeu muito de Sua força</strong> — tanta que está, na verdade, morrendo. 
+              <strong className="text-amber-200"> Prios perdeu muito de Sua força</strong>, tanta que está, na verdade, morrendo. 
               Mas ainda há esperança: se os humanos trabalharem duro, extraírem mais colheitas do solo, 
               colherem mais recursos das florestas e montanhas, e colonizarem mais ermos, então Prios ficará forte novamente.
             </p>
@@ -72,7 +72,7 @@ export default function SpiritualitySection() {
             a <strong className="text-blue-200">Mãe Terra</strong>, o <strong className="text-blue-200">Desbravador</strong>, o <strong className="text-blue-200">Executor</strong>, entre outros.
           </p>
           <p className="text-sm text-foreground/90 leading-relaxed">
-            Muitos ambrianos que não se conformam com a Igreja de Prios tornaram-se <strong className="text-blue-200">Colonos Livres</strong> — 
+            Muitos ambrianos que não se conformam com a Igreja de Prios tornaram-se <strong className="text-blue-200">Colonos Livres</strong>, 
             refugiados que aproveitaram a oportunidade de se libertar e formar sociedades próprias, 
             professando lealdade a divindades proibidas. Cerca de vinte assentamentos livres 
             em florestas e montanhas se recusam a se submeter.
@@ -98,10 +98,10 @@ export default function SpiritualitySection() {
             <div className="bg-green-950/20 rounded-md p-3 border border-green-900/30">
               <h4 className="font-semibold text-green-300 text-sm mb-2">Divindades Conhecidas</h4>
               <ul className="text-xs text-muted-foreground space-y-1.5">
-                <li>• <strong className="text-green-200">Uron</strong> (clã Gaoia) — deus serpente, similar à Mãe Terra ambriana</li>
-                <li>• <strong className="text-green-200">Arex</strong> (clã Baiaga) — lobo de sangue, similar ao Desbravador</li>
-                <li>• <strong className="text-green-200">Oroke</strong> (muitos clãs) — a aranha, similar ao Executor</li>
-                <li>• <strong className="text-green-200">Filha-de-Sangue</strong> (clã Saar-Kahn) — bestial e temida</li>
+                <li>• <strong className="text-green-200">Uron</strong> (clã Gaoia): deus serpente, similar à Mãe Terra ambriana</li>
+                <li>• <strong className="text-green-200">Arex</strong> (clã Baiaga): lobo de sangue, similar ao Desbravador</li>
+                <li>• <strong className="text-green-200">Oroke</strong> (muitos clãs): a aranha, similar ao Executor</li>
+                <li>• <strong className="text-green-200">Filha-de-Sangue</strong> (clã Saar-Kahn): bestial e temida</li>
               </ul>
             </div>
             <div className="bg-green-950/20 rounded-md p-3 border border-green-900/30">
@@ -118,7 +118,7 @@ export default function SpiritualitySection() {
             <h4 className="font-semibold text-green-300 text-sm mb-2">As Bruxas e a Huldra</h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
               A líder das bruxas é a <strong className="text-green-200">Huldra Yeleta</strong>, que reside em Karvosti junto do Alto Chefe. 
-              Quatro vezes por ano, nos solstícios e equinócios, ela reúne as <strong className="text-green-200">Guardiãs</strong> — 
+              Quatro vezes por ano, nos solstícios e equinócios, ela reúne as <strong className="text-green-200">Guardiãs</strong>, 
               as líderes dos nodos de encantos de cada clã. Os encontros discutem o estado da Davokar e buscam soluções para conflitos. 
               A Huldra tem poder sobre os bárbaros possivelmente maior que o de Korinthia sobre os ambrianos.
             </p>
@@ -136,7 +136,7 @@ export default function SpiritualitySection() {
             </h3>
           </div>
           <p className="text-sm text-foreground/90 leading-relaxed">
-            Elfos, goblins e ogros — o chamado Povo Antigo — parecem ter uma relação mais tranquila com assuntos espirituais. 
+            Elfos, goblins e ogros, o chamado Povo Antigo, parecem ter uma relação mais tranquila com assuntos espirituais. 
             Em vez de adorar ou rezar para seres divinos, eles parecem satisfeitos em <strong className="text-purple-200">mostrar gratidão aos espíritos</strong> que, 
             de acordo com eles, habitam todos os aspectos da natureza.
           </p>
@@ -171,13 +171,13 @@ export default function SpiritualitySection() {
           </p>
           <div className="grid md:grid-cols-2 gap-3">
             <div className="bg-red-950/20 rounded-md p-3 border border-red-900/30 space-y-2">
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Evite as encostas do Cume da Cripta</strong> — onde Grabando descansa em sono leve e não deve ser perturbado</p>
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Não mencione a Andarilha do Água Branca pelo nome</strong> — ela ouvirá seu chamado e responderá com força</p>
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Nunca devore os frutos do Sino Vermelho</strong> — seu néctar é maculado, ele planta a corrupção</p>
+              <p className="text-xs text-muted-foreground">⚠️ <strong>Evite as encostas do Cume da Cripta</strong>, onde Grabando descansa em sono leve e não deve ser perturbado</p>
+              <p className="text-xs text-muted-foreground">⚠️ <strong>Não mencione a Andarilha do Água Branca pelo nome</strong>, pois ela ouvirá seu chamado e responderá com força</p>
+              <p className="text-xs text-muted-foreground">⚠️ <strong>Nunca devore os frutos do Sino Vermelho</strong>, pois seu néctar é maculado e planta a corrupção</p>
             </div>
             <div className="bg-red-950/20 rounded-md p-3 border border-red-900/30 space-y-2">
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Nunca beba da água cor-de-arco-íris</strong> — ela agrava a sede e prejudica a saúde</p>
-              <p className="text-xs text-muted-foreground">⚠️ <strong>Não ouça a canção de gargantas não vistas</strong> — isso é um aviso, não um chamado</p>
+              <p className="text-xs text-muted-foreground">⚠️ <strong>Nunca beba da água cor-de-arco-íris</strong>, pois ela agrava a sede e prejudica a saúde</p>
+              <p className="text-xs text-muted-foreground">⚠️ <strong>Não ouça a canção de gargantas não vistas</strong>, isso é um aviso, não um chamado</p>
               <p className="text-xs text-muted-foreground italic mt-2">Cada clã tem seus próprios tabus. Violar os éditos ditados pela Huldra traz consequências terríveis.</p>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function SpiritualitySection() {
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Bardos, poetas, atores e dançarinos se apresentam em tavernas, restaurantes e estalagens. 
                 Representações da Grande Guerra são comuns. Contos sobre <strong className="text-blue-200">Portadores da Luz e Mártires</strong> são populares. 
-                Recentemente, contos da Davokar ganharam os palcos — de caçadores de fortunas, encontros com 
+                Recentemente, contos da Davokar ganharam os palcos, de caçadores de fortunas, encontros com 
                 arquitrolls e câmaras de tesouros. Contadores ambrianos visitam colegas bárbaros para aprender histórias, 
                 incluindo poemas da lendária Huldra Aroaleta.
               </p>
