@@ -107,7 +107,7 @@ export default function TimelineSection() {
         <Card className="bg-card border-border">
           <CardContent className="p-4">
             <h4 className="text-sm font-bold text-purple-300 mb-2">Symbaroum (Civilização Antiga)</h4>
-            <p className="text-[11px] text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Império humano que existiu há mais de mil anos. Dominava magia poderosa e construiu cidades magníficas. 
               Caiu por razões desconhecidas; lendas falam de um último imperador que irritou algum ser supremo. 
               Suas ruínas jazem sob Davokar. A cidade perdida de Symbar, sua capital, é o sonho de todo explorador, 
@@ -118,7 +118,7 @@ export default function TimelineSection() {
         <Card className="bg-card border-border">
           <CardContent className="p-4">
             <h4 className="text-sm font-bold text-red-300 mb-2">Os Lordes Negros</h4>
-            <p className="text-[11px] text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Nobres e feiticeiros de Alberetor que abraçaram poderes proibidos. Comandavam mortos-vivos e abominações. 
               Devastaram Alberetor por cerca de 20 anos. Sua fortaleza foi destruída na ofensiva final, mas 
               os que estiveram lá se lembram dos horrores. Os ambrianos tentam olhar adiante, 
@@ -129,7 +129,7 @@ export default function TimelineSection() {
         <Card className="bg-card border-border">
           <CardContent className="p-4">
             <h4 className="text-sm font-bold text-blue-300 mb-2">A Rainha Korinthia</h4>
-            <p className="text-[11px] text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Filha do Rei Ynedar, coroada durante a guerra com não mais que doze anos. 
               Sobreviveu a dois anos de cativeiro, resgatada por Demeon Soleij. 
               Usa máscara de porcelana vitrificada sobre o rosto lacerado. Liderou A Mudança e fundou Ambria. 
@@ -146,7 +146,7 @@ export default function TimelineSection() {
           <h4 className="text-base font-bold text-amber-200 mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             A Profecia de Sarkomal (Rumor)
           </h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
+          <p className="text-sm text-muted-foreground leading-relaxed">
             Segundo rumores que circulam em Yndaros e Forte do Cardo, a Igreja do Sol recuperou uma profecia 
             de um antigo templo em ruínas a alguns dias de viagem a leste de Karvosti. O Primeiro Padre nega 
             firmemente qualquer conhecimento, mas numerosas versões surgiram com o mesmo tema: 
@@ -193,7 +193,7 @@ export default function TimelineSection() {
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap gap-4 mt-6 text-xs text-muted-foreground">
+      <div className="flex flex-wrap gap-4 mt-6 text-sm text-muted-foreground">
         <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-purple-500" /> Era Antiga</span>
         <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-red-500" /> Grande Guerra</span>
         <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-amber-500" /> Ponto de Virada</span>

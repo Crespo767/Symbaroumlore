@@ -125,7 +125,7 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container">
           <ScrollArea className="w-full">
-            <div className="flex gap-1 py-3 min-w-max">
+            <div className="flex gap-1 py-3 w-max mx-auto md:w-full md:justify-center">
               {sections.map((section) => {
                 const Icon = section.icon;
                 return (
