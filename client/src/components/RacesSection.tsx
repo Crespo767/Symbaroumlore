@@ -3,95 +3,88 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const races = [
+  // LIVRO BÁSICO
   {
     name: "Humano (Ambriano)",
-    traits: ["Contatos ou Privilegiado"],
-    color: "border-l-blue-500",
     source: "Básico",
-    description: "O povo da Rainha Korinthia, organizado em uma civilização estruturada com nobreza, clero e povo comum. Nomes masculinos terminam em -o e femininos em -a; nobres usam sufixos como -gai, -goi ou -mei.",
-    culture: "Civilização urbana, hierárquica. Valorizam ordem, lei e a fé em Prios. Buscam expandir seu domínio sobre as terras bárbaras e explorar as ruínas da Davokar.",
-    attributes: "Flexíveis, podem priorizar qualquer atributo dependendo da ocupação.",
+    color: "border-l-blue-500",
+    description: "Refugiados e conquistadores que fugiram de sua terra natal corrompida, Alberetor, e cruzaram os Titãs para fundar o reino de Ambria sobre as ruínas de Lindaros.",
+    lore: "Acreditam compartilhar uma árvore genealógica comum com os bárbaros, oriunda da antiga Symbaroum. Chegaram trazendo arquitetura monumental, exércitos disciplinados e uma economia agressiva baseada na conquista.",
+    culture: "Uma sociedade hierárquica dividida entre nobreza, plebe e Igreja. Governam através da força e da lei, com grande ambição de dominar as riquezas perdidas nas profundezas de Davokar.",
   },
   {
     name: "Humano (Bárbaro)",
-    traits: ["Mateiro ou Resistente a Venenos"],
-    color: "border-l-green-500",
     source: "Básico",
-    description: "Comumente aceitos como descendentes de Symbaroum, a civilização que governou a região até um milênio atrás. Vivem em mais harmonia desde a chegada ambriana. Nomes masculinos terminam em -mar, -mon ou -mer; femininos em -ona, -ola ou -ra.",
-    culture: "Vivem em clãs na periferia da Davokar. Liderados por chefes e guiados espiritualmente por bruxas. Sob a orientação das bruxas, estão plenamente conscientes de que dependem da natureza para sua sobrevivência.",
-    attributes: "Tendem a Vigoroso e Rápido altos. Bons guerreiros e caçadores.",
+    color: "border-l-green-500",
+    description: "O povo originário das bordas de Davokar, organizados em clãs. Historicamente mais conectados aos segredos e limites da grande floresta.",
+    lore: "Seus clãs levam vidas independentes e respeitam acordos ancestrais, liderados por chefes bélicos e orientados pelas Bruxas. O Alto Chefe em Karvosti age como um árbitro entre os clãs e um elo de união contra invasores.",
+    culture: "Guiados por tabus rígidos que prezam pelo equilíbrio: honrar a natureza, não abusar de seus recursos e evitar as partes mais sombrias de Davokar, temendo o despertar da antiga corrupção.",
   },
   {
     name: "Cambiante",
-    traits: ["Contatos ou Dedo Verde"],
-    color: "border-l-purple-500",
     source: "Básico",
-    description: "Crianças élficas deixadas em famílias humanas, substituindo bebês roubados. Na adolescência, desenvolvem características élficas como orelhas pontiagudas e olhos amendoados. Vivem muito tempo.",
-    culture: "Exilados tanto da sociedade humana quanto da élfica. Vagam solitários, frequentemente confundidos com feiticeiros. Alguns encontram refúgio entre os bárbaros ou na Ordo Magica.",
-    attributes: "Versáteis. Resoluto e Persuasivo são comuns para cambiantes místicos.",
+    color: "border-l-purple-500",
+    description: "Crianças deixadas em berços humanos no lugar de bebês roubados por elfos. Parecem humanos na infância, mas desenvolvem características élficas na adolescência.",
+    lore: "Seu ciclo de vida não avança como o dos elfos autênticos. Alguns estudiosos acreditam que são uma raça própria criada por magia, enquanto outros defendem que são elfos verdadeiros cujo desenvolvimento foi atrofiado pelo convívio humano.",
+    culture: "Exilados tanto da sociedade humana quanto da élfica. Costumam ter vidas difíceis e solitárias, tornando-se amargurados ou frívolos. Alguns encontram abrigo com bruxas ou magos da Ordo Magica, mas a maioria luta para sobreviver nas ruas.",
   },
   {
     name: "Goblin",
-    traits: ["Sobrevivente ou Escapista"],
-    color: "border-l-amber-500",
     source: "Básico",
-    description: "Origem misteriosa, vindos das profundezas da Davokar. Vida extremamente curta: adultos aos 5 anos, idosos aos 20, raridade chegar aos 30. Temperamento impetuoso e impulsivo. Podem evoluir para trolls via crisálida.",
-    culture: "Trabalham em tarefas pesadas no Forte do Cardo e outros assentamentos. Apesar de serem tratados como párias, são surpreendentemente resilientes e adaptáveis. Formam comunidades caóticas mas funcionais.",
-    attributes: "Rápido e Discreto altos. Bons ladinos e batedores.",
+    color: "border-l-amber-500",
+    description: "Vindos das profundezas da Davokar, possuem uma vida extremamente curta. São considerados adultos aos dez anos e raramente alcançam os trinta, frequentemente retornando à floresta para morrer.",
+    lore: "No Forte do Cardo e outros locais de fronteira, sua presença ruidosa e impetuosa os torna impopulares. Aceitam os trabalhos mais sujos e perigosos, mas alguns quebram esse ciclo para se tornarem caçadores de tesouros ou pupilos em monastérios.",
+    culture: "Sua cultura é caótica e energética, com jogos excêntricos que forasteiros acham repulsivos ou confusos. Os goblins vivem o agora com intensidade, sabendo que seu tempo no mundo é efêmero.",
   },
   {
     name: "Ogro",
-    traits: ["Pária", "Robusto"],
-    color: "border-l-red-500",
     source: "Básico",
-    description: "Criaturas solitárias das profundezas da Davokar. Grandes e incrivelmente fortes. Raramente vistos em assentamentos humanos, mas alguns poucos se aventuram fora da floresta. Possuem inteligência surpreendente.",
-    culture: "Vivem isolados nas profundezas. Quando aparecem em sociedade, geralmente são contratados como guarda-costas ou trabalhadores braçais. São gentis por natureza, apesar da aparência intimidadora.",
-    attributes: "Vigoroso muito alto (até 18). Força descomunal natural.",
+    color: "border-l-red-500",
+    description: "Criaturas gigantescas, curiosas e muitas vezes silenciosas que emergem do âmago de Davokar sem lembranças de sua própria origem ou de quem são.",
+    lore: "Eles saem das matas já adultos, como quadros em branco. Sem memória ou identidade, são frequentemente abrigados por goblins, humanos ou bruxas, que lhes dão um nome e ensinam sobre o mundo.",
+    culture: "Não possuem sociedade própria conhecida. Muitos acabam servindo como seguranças pesados nas favelas de Yndaros ou trabalhadores de força bruta nas fazendas fronteiriças. São notáveis por sua calma taciturna.",
   },
+
+  // GUIA AVANÇADO
   {
     name: "Elfo",
-    traits: ["Vida Longa", "Pária"],
-    color: "border-l-emerald-400",
     source: "Avançado",
-    description: "Membros do Pacto de Ferro, guardiões imortais da Davokar. Passam por um ciclo de vida em estações: Primavera (jovem, curioso), Verão (guerreiro, protetor), Outono (sábio, cansado) e Inverno (antigo, perigoso). Alguns abandonam o Pacto.",
-    culture: "Vivem em comunidades ocultas na floresta. Dedicam-se a impedir que a corrupção se espalhe e que humanos perturbem ruínas antigas. Consideram-se superiores às raças mortais. Comunicam-se por cantos e gestos sutis.",
-    attributes: "Rápido e Vigilante altos. Excelentes caçadores e guerreiros da floresta.",
+    color: "border-l-emerald-400",
+    description: "Mais do que uma raça, os elfos da Davokar formam uma ordem sagrada de guardiões, o Pacto de Ferro. Sua missão é impedir que o mal adormecido sob o musgo da floresta desperte.",
+    lore: "Vivem um ciclo de vida em fases (estações): fadas primaveris, elfos de verão (guerreiros vigilantes), elfos de outono (sábios e melancólicos) e o letal inverno da alma. Poucos conhecem as terras ancestrais do oeste; seu dever está nas sombras de Davokar.",
+    culture: "Carregam a triste responsabilidade do mundo, e os mais velhos lamentam por trazerem os mais jovens à existência para uma vida de eterno combate e sacrifício. Lidam ativamente contra os exploradores de tesouros do sul.",
   },
   {
     name: "Anão",
-    traits: ["Herança Natural", "Memória Absoluta", "Pária"],
-    color: "border-l-stone-400",
     source: "Avançado",
-    description: "Povo misterioso, possivelmente criado durante a era de Symbaroum. Família é o centro de tudo, e os clãs anões são extremamente unidos. Memória perfeita que se estende por gerações. Poucos em número, mas resilientes.",
-    culture: "Vivem em pequenos grupos familiares, frequentemente como artesãos ou comerciantes. Sua Memória Absoluta os torna excelentes arquivistas e historiadores. Desconfiados de estranhos, mas leais até a morte aos aliados.",
-    attributes: "Vigoroso e Astuto altos. Bons artesãos e guerreiros resistentes.",
+    color: "border-l-stone-400",
+    description: "Um povo cuja história está envolta em mistério, fugindo de um passado sombrio em direção ao futuro. Para eles, \"a família é seu escudo, a língua sua arma, e o mundo seu campo de batalha\".",
+    lore: "Dizem que surgiram como vermes na carcaça apodrecida da Serpente do Mundo e receberam intelecto dos feiticeiros do antigo Império de Symbaroum para serem escravos. Esse vínculo com seus mestres forjou uma contracultura resistente e códigos ocultos na sua fala.",
+    culture: "Eles nunca escrevem nada, temendo que seus textos fossem lidos pelos antigos senhores. Possuem uma língua rica em duplos sentidos. A família é o centro absoluto de sua sociedade em Yndaros, e o exílio familiar é pior que a morte.",
   },
   {
     name: "Humano Sequestrado",
-    traits: ["Mateiro"],
-    color: "border-l-teal-400",
     source: "Avançado",
-    description: "Humanos roubados quando bebês e criados por elfos do Pacto de Ferro. Treinados como guerreiros e batedores desde a infância. Conhecem a floresta como poucos humanos. Vivem entre dois mundos.",
-    culture: "Criados com valores élficos mas com corpo e vida humana. Alguns retornam à sociedade humana, outros permanecem servindo o Pacto. Possuem conhecimento profundo de Davokar que poucos humanos têm.",
-    attributes: "Rápido, Vigilante e Discreto altos. Excelentes batedores e caçadores.",
+    color: "border-l-teal-400",
+    description: "Bebês e crianças tomadas de famílias humanas pelos elfos, criados entre as fileiras do Pacto de Ferro no coração de Davokar.",
+    lore: "Originalmente não passavam de reféns ou peões, mas recentemente os elfos têm usado esses humanos para aprender sobre o comportamento de seus vizinhos do sul ou atuar como embaixadores em tempos de crise.",
+    culture: "Crescem absorvendo a cultura, a sabedoria e a língua élfica, divididos entre sua biologia humana e a filosofia do Pacto. Alguns tornam-se aliados inestimáveis de seus mestres de orelhas pontudas.",
   },
   {
     name: "Troll",
-    traits: ["Vida Longa", "Pária"],
-    color: "border-l-orange-600",
     source: "Avançado",
-    description: "Seres poderosos do Submundo que evoluem de goblins através de uma crisálida misteriosa. Enormes e resistentes, com pele como casca de árvore. Podem viver séculos. Possuem uma cultura própria baseada no canto.",
-    culture: "Vivem nas profundezas da Davokar ou em cavernas. Possuem a tradição do Canto do Troll, uma magia expressa pela voz. São solitários mas não hostis. Alguns trolls são cantores lendários cujas vozes ecoam pela floresta.",
-    attributes: "Vigoroso extremamente alto. Podem ter Armadurado, Arma Natural, Regeneração ou Robusto como traços adicionais.",
+    color: "border-l-orange-600",
+    description: "Seres antigos e poderosos que habitam o Mundo Subterrâneo ou cavernas recônditas, possuindo um profundo vínculo orgânico com a terra.",
+    lore: "Muitos sábios afirmam que trolls derivam dos goblins através de um místico processo de crisálida. Eles crescem e envelhecem ao longo de séculos, transformando-se em autênticas forças da natureza vivas.",
+    culture: "Os Trolls têm culturas secretas focadas no ritual e na música. Eles resolvem disputas através de desafios de força, resistência e até performances de sua mágica cantoria ancestral. Valorizam paciência e o respeito absoluto às suas antigas tradições.",
   },
   {
     name: "Morto-Vivo",
-    traits: ["Totalmente Corrompido", "Livre Arbítrio"],
-    color: "border-l-gray-500",
     source: "Avançado",
-    description: "Fenômeno recente e perturbador: pessoas que despertaram após a morte com mente intacta. Completamente corrompidos mas mantêm livre arbítrio e personalidade. Não são mortos-vivos tradicionais, são algo novo e inexplicável.",
-    culture: "Rejeitados por todos. A Igreja de Prios os considera abominações. Alguns buscam entender sua condição, outros simplesmente tentam existir. Sua Sombra é completamente negra, revelando sua natureza a qualquer um com Visão de Bruxa.",
-    attributes: "Resoluto alto (necessário para manter a sanidade). Não precisam comer, dormir ou respirar.",
+    color: "border-l-gray-500",
+    description: "Um fenômeno novo, estranho e profano: indivíduos que morreram, mas retornaram com suas mentes e memórias perfeitamente preservadas.",
+    lore: "Apesar de seus corpos estarem sem vida, inertes e frios, eles caminham e agem com livre-arbítrio, alheios à necessidade de comer, respirar ou dormir. Eles são a prova física e inquietante da perturbação no equilíbrio natural.",
+    culture: "Caçados pela inquisição e temidos pela população, vivem reclusos ou disfarçados. Muitos buscam entender por que não encontraram a paz e o que os prende ao mundo dos vivos.",
   },
 ];
 
@@ -104,12 +97,10 @@ export default function RacesSection() {
     <div className="space-y-8">
       <div className="mb-8">
         <h2 className="text-3xl md:text-4xl text-amber-100 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>
-          Raças Jogáveis
+          Povos do Mundo
         </h2>
         <p className="text-muted-foreground max-w-3xl leading-relaxed">
-          O mundo de Symbaroum oferece dez raças distintas para os jogadores. Cada uma possui traços 
-          raciais gratuitos, cultura própria e posição única na sociedade. De nobres ambrianos a 
-          trolls ancestrais, cada escolha define profundamente a experiência de jogo.
+          No mundo de Symbaroum, a variedade de povos reflete o peso da história e os segredos enterrados na floresta da Davokar. Cada raça possui sua própria herança, seus conflitos e suas maneiras únicas de lidar com o legado sombrio do antigo império.
         </p>
       </div>
 
@@ -130,7 +121,7 @@ export default function RacesSection() {
         ))}
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2">
         {filtered.map((race, index) => (
           <motion.div
             key={race.name}
@@ -139,36 +130,36 @@ export default function RacesSection() {
             transition={{ duration: 0.4, delay: index * 0.08 }}
           >
             <Card className={`bg-card border-border border-l-4 ${race.color} h-full`}>
-              <CardContent className="p-5">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-lg font-bold text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                    {race.name}
-                  </h3>
-                  <span className={`text-xs px-1.5 py-0.5 rounded ${
+              <CardContent className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="space-y-1">
+                    <h3 className="text-2xl font-bold text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                      {race.name}
+                    </h3>
+                    <p className="text-sm text-amber-200/80 italic">
+                      {race.description}
+                    </p>
+                  </div>
+                  <span className={`text-xs px-2 py-0.5 rounded whitespace-nowrap ml-4 ${
                     race.source === "Avançado" ? "bg-purple-900/40 text-purple-300" : "bg-green-900/40 text-green-300"
                   }`}>
                     {race.source}
                   </span>
                 </div>
-                <div className="flex flex-wrap gap-1.5 mb-3">
-                  {race.traits.map((trait) => (
-                    <span key={trait} className="text-xs px-2 py-0.5 rounded bg-amber-900/30 text-amber-200 border border-amber-800/40">
-                      {trait}
-                    </span>
-                  ))}
-                </div>
-                <p className="text-sm text-foreground/85 leading-relaxed mb-3">
-                  {race.description}
-                </p>
-                <div className="bg-secondary/50 rounded p-3 mb-2">
-                  <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Cultura</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {race.culture}
-                  </p>
-                </div>
-                <div className="bg-secondary/30 rounded p-2">
-                  <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-0.5">Atributos Sugeridos</h4>
-                  <p className="text-sm text-muted-foreground">{race.attributes}</p>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Visão Geral</h4>
+                    <p className="text-sm text-foreground/85 leading-relaxed">
+                      {race.lore}
+                    </p>
+                  </div>
+                  <div className="bg-secondary/30 rounded p-3">
+                    <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Cultura e Vida</h4>
+                    <p className="text-sm text-foreground/85 leading-relaxed">
+                      {race.culture}
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -177,28 +168,28 @@ export default function RacesSection() {
       </div>
 
       {/* Race Lifecycle Note */}
-      <Card className="bg-card border-border mt-6">
-        <CardContent className="p-5">
-          <h3 className="text-lg font-bold text-amber-200 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+      <Card className="bg-card border-border mt-8">
+        <CardContent className="p-6">
+          <h3 className="text-xl font-bold text-amber-200 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Ciclos de Vida Especiais
           </h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-emerald-950/20 rounded p-3 border border-emerald-900/30">
-              <h4 className="text-sm font-semibold text-emerald-300 mb-1">Ciclo Élfico</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Primavera (jovem, curioso) → Verão (guerreiro, no auge) → Outono (sábio, melancólico) → Inverno (antigo, temível). Cada estação dura séculos.
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-emerald-950/20 rounded p-4 border border-emerald-900/30">
+              <h4 className="text-sm font-semibold text-emerald-300 mb-2">Ciclo Élfico</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                As fadas da Primavera amadurecem em guerreiros de Verão; com o passar dos séculos e perdas, tornam-se melancólicos elfos de Outono, e os raros sobreviventes entram em seu temível Inverno da alma.
               </p>
             </div>
-            <div className="bg-orange-950/20 rounded p-3 border border-orange-900/30">
-              <h4 className="text-sm font-semibold text-orange-300 mb-1">Evolução Goblin→Troll</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Goblins podem entrar em crisálida e emergir como trolls, um processo raro e misterioso. Trolls vivem séculos e crescem continuamente.
+            <div className="bg-orange-950/20 rounded p-4 border border-orange-900/30">
+              <h4 className="text-sm font-semibold text-orange-300 mb-2">A Ascensão dos Trolls</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Diz-se que a linhagem dos trolls tem início com a impetuosa e breve vida dos goblins. Aqueles que encontram seu caminho de volta às profundezas podem se fechar em uma crisálida e emergir como novos trolls.
               </p>
             </div>
-            <div className="bg-gray-800/40 rounded p-3 border border-gray-700/30">
-              <h4 className="text-sm font-semibold text-gray-300 mb-1">Despertar Morto-Vivo</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Fenômeno recente sem explicação. A pessoa morre e desperta com mente intacta mas corpo morto. Corrupção total mas livre arbítrio preservado.
+            <div className="bg-gray-800/40 rounded p-4 border border-gray-700/30">
+              <h4 className="text-sm font-semibold text-gray-300 mb-2">O Enigma dos Mortos</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Um despertar que desafia qualquer lei da natureza ou do sol: indivíduos cujos corações pararam de bater e sangues de fluir, mas cuja vontade e memória permanecem inexplicavelmente vivas e intactas.
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import {
   Sword,
   Trees,
@@ -20,10 +20,10 @@ const TimelineSection = lazy(() => import("@/components/TimelineSection"));
 const DavokarSection = lazy(() => import("@/components/DavokarSection"));
 const FactionsSection = lazy(() => import("@/components/FactionsSection"));
 const RacesSection = lazy(() => import("@/components/RacesSection"));
-const GameSystemSection = lazy(() => import("@/components/GameSystemSection"));
 const LocationsSection = lazy(() => import("@/components/LocationsSection"));
-const CorruptionSection = lazy(() => import("@/components/CorruptionSection"));
+// const CorruptionSection = lazy(() => import("@/components/CorruptionSection"));
 const SpiritualitySection = lazy(() => import("@/components/SpiritualitySection"));
+// const GameSystemSection = lazy(() => import("@/components/GameSystemSection"));
 
 // const AbilitiesSection = lazy(() => import("@/components/AbilitiesSection"));
 // const PowersSection = lazy(() => import("@/components/PowersSection"));
@@ -47,8 +47,8 @@ export default function Home() {
     { id: "faccoes", label: "Facções", icon: Crown },
     { id: "espiritualidade", label: "Crenças", icon: Sparkles },
     { id: "racas", label: "Raças", icon: Users },
-    { id: "corrupcao", label: "Corrupção", icon: Skull },
-    { id: "sistema", label: "Sistema", icon: Sword },
+    // { id: "corrupcao", label: "Corrupção", icon: Skull },
+    // { id: "sistema", label: "Sistema", icon: Sword },
     // { id: "habilidades", label: "Habilidades", icon: Shield },
     // { id: "poderes", label: "Poderes", icon: Wand2 },
     // { id: "equipamentos", label: "Equipamentos", icon: Package },
@@ -130,18 +130,18 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="container">
-          <ScrollArea className="w-full">
-            <div className="flex gap-1 py-3 w-max mx-auto md:w-full md:justify-center">
+        <div className="container px-0 md:px-8">
+          <ScrollArea className="w-full whitespace-nowrap">
+            <div className="flex gap-2 py-3 px-4 w-max mx-auto md:w-full md:justify-center">
               {sections.map((section) => {
                 const Icon = section.icon;
                 return (
                   <button
                     key={section.id}
                     onClick={() => setActiveSection(section.id)}
-                    className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                    className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                       activeSection === section.id
-                        ? "bg-amber-900/40 text-amber-200 border border-amber-700/50"
+                        ? "bg-amber-900/40 text-amber-200 border border-amber-700/50 shadow-sm"
                         : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                     }`}
                   >
@@ -151,6 +151,7 @@ export default function Home() {
                 );
               })}
             </div>
+            <ScrollBar orientation="horizontal" className="invisible md:visible" />
           </ScrollArea>
         </div>
       </nav>
@@ -176,8 +177,8 @@ export default function Home() {
             {activeSection === "faccoes" && <FactionsSection />}
             {activeSection === "espiritualidade" && <SpiritualitySection />}
             {activeSection === "racas" && <RacesSection />}
-            {activeSection === "corrupcao" && <CorruptionSection />}
-            {activeSection === "sistema" && <GameSystemSection />}
+            {/* {activeSection === "corrupcao" && <CorruptionSection />} */}
+            {/* {activeSection === "sistema" && <GameSystemSection />} */}
           </motion.div>
         </Suspense>
       </main>

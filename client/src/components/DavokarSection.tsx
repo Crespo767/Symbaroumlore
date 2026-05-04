@@ -26,12 +26,16 @@ export default function DavokarSection() {
       </div>
 
       {/* Map */}
-      <Card className="bg-card border-border overflow-hidden">
-        <img
-          src="/images/Mapa.png"
-          alt="Mapa Oficial de Davokar"
-          className="w-full max-h-[500px] object-contain bg-amber-950/20 p-2"
-        />
+      <Card className="bg-card border-border overflow-hidden rounded-md">
+        <div className="relative w-full" style={{ paddingBottom: "2%" }}>
+          {/* Removing bottom border by using clipPath or an inner div that hides the bottom slightly, and removing dark padding */}
+          <img
+            src="/images/Mapa.png"
+            alt="Mapa Oficial de Davokar"
+            className="w-full max-h-[500px] object-contain object-top"
+            style={{ clipPath: "inset(0 0 10px 0)" }}
+          />
+        </div>
       </Card>
 
       {/* Regions Tabs */}
@@ -231,7 +235,8 @@ export default function DavokarSection() {
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
             Desde o outono do Ano 15, toda pessoa de origem ambriana que deseje se aventurar na Davokar 
             deve obter uma Licença de Explorador. Pode ser comprada nos quartéis de Yndaros ou na 
-            Legação da Rainha em Forte do Cardo.
+            Legação da Rainha em Forte do Cardo. Aqueles pegos sem a licença ou portando falsificações 
+            enfrentam punições severas, incluindo trabalhos forçados.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -277,6 +282,36 @@ export default function DavokarSection() {
           </p>
         </CardContent>
       </Card>
+
+      {/* The Iron Pact & The Spider King */}
+      <div className="grid md:grid-cols-2 gap-8 mt-8">
+        <Card className="bg-card border-border border-l-4 border-l-stone-700">
+          <CardContent className="p-6 space-y-3">
+            <h3 className="text-xl font-bold text-stone-200" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              O Pacto de Ferro
+            </h3>
+            <p className="text-sm text-foreground/90 leading-relaxed">
+              Há muito tempo, os elfos selaram o <strong className="text-stone-200">Pacto de Ferro</strong> com os senhores humanos 
+              da região, exigindo que a humanidade nunca mais se aprofundasse na Davokar para não despertar as abominações adormecidas de Symbaroum. 
+              Hoje, os elfos guerreiros cumprem essa antiga promessa com sangue, atirando setas mortais contra caçadores de tesouros ambrianos e 
+              qualquer um que perturbe a letargia do Abismo Verde.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border border-l-4 border-l-indigo-700">
+          <CardContent className="p-6 space-y-3">
+            <h3 className="text-xl font-bold text-indigo-200" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              O Rei Aranha
+            </h3>
+            <p className="text-sm text-foreground/90 leading-relaxed">
+              Diz a lenda que a única vez que os clãs bárbaros se uniram sob um único Alto Chefe foi para enfrentar a horda do 
+              <strong className="text-indigo-200"> Rei Aranha</strong>. As aracnídeas gigantes (segue-rebanhos, morde-crânios e rainhas das teias) 
+              habitavam as partes mais profundas e místicas da floresta. O temido Rei Aranha quase aniquilou os clãs antes de ser derrotado pelo lendário Maiesticar.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
 
       {/* Symbar */}
       <Card className="bg-card border-border border-l-4 border-l-purple-700 mt-8">

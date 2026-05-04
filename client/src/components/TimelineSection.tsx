@@ -2,26 +2,27 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
 const timelineEvents = [
-  { year: "~1000 anos atrás", title: "Queda de Symbaroum", description: "O poderoso império de Symbaroum, cuja capital Symbar ficava no coração do que hoje é a floresta Davokar, cai no esquecimento. As razões exatas de sua queda são desconhecidas, e as lendas, numerosas, falam de um último imperador que irritou alguma forma de ser supremo e assim causou a ruína do império. A floresta Davokar cresceu e engoliu suas ruínas.", type: "ancient" },
-  { year: "~500 anos atrás", title: "Clãs se Unem contra o Rei Aranha", description: "Os clãs da Davokar, descendentes da civilização de Symbaroum, se unem sob o primeiro Alto Chefe para enfrentar o Rei Aranha, uma ameaça que emergiu das profundezas da floresta. Nessa mesma época, a cidade-estado de Lindaros é fundada nas planícies ao sul de Davokar.", type: "ancient" },
-  { year: "~200 anos atrás", title: "Extermínio de Lindaros", description: "A população inteira de Lindaros é exterminada por uma doença hemorrágica contagiosa. A cidade é abandonada e suas ruínas permanecem vazias por séculos, consideradas amaldiçoadas.", type: "ancient" },
-  { year: "Ano -21", title: "Lordes Negros Conquistam Berendoria", description: "Os Lordes Negros, nobres e feiticeiros corrompidos de Alberetor que abraçaram poderes proibidos, conquistam a cidade fronteiriça de Berendoria, dando início à devastação do reino.", type: "war" },
-  { year: "Ano -19", title: "Início da Grande Guerra", description: "Alberetor contra-ataca os Lordes Negros invasores e a Grande Guerra começa oficialmente. Os exércitos da noite reuniam mortos-vivos, e soldados eram frequentemente forçados a matar os mesmos inimigos vez após outra, inimigos que haviam sido irmãos e irmãs até serem vitimados pela magia assassina dos Lordes Negros.", type: "war" },
-  { year: "Ano -10", title: "Morte do Rei Ynedar", description: "O Rei Ynedar de Alberetor é morto em batalha contra os Lordes Negros. Sua filha Korinthia, que não tinha mais que doze anos, é coroada Rainha de Alberetor em meio ao caos da guerra.", type: "war" },
-  { year: "Ano -5", title: "Prios Declarado o Uno", description: "Onde os Lordes Negros representavam escuridão e morte, o deus sol Prios veio a simbolizar a luz de Alberetor. A Igreja declara Prios como o Uno, o único deus verdadeiro, e o Doador das Leis de Alberetor.", type: "war" },
-  { year: "Ano -2", title: "Captura de Korinthia", description: "O corcel lendário de Korinthia, Mestre, é gravemente ferido por uma ponta de lança envenenada e morre. A Rainha é capturada pelos Lordes Negros. O desejo de resgatá-la deu aos cavaleiros tanta valentia que nem magia da morte podia fazê-los hesitar.", type: "war" },
-  { year: "Ano 0 (outono)", title: "Resgate de Korinthia & Fim da Guerra", description: "O sacerdote Demeon Soleij caminha nu através da muralha de fogo profano que mantinha Korinthia cativa e a carrega para fora. Ele perde seus olhos e cabelo. Korinthia escapa com queimaduras médias e o rosto lacerado, que passa a cobrir com uma máscara de porcelana vitrificada, recebendo o título de 'Ruína da Noite'. A fortaleza dos Lordes Negros é invadida e a guerra acaba.", type: "turning" },
-  { year: "Ano 0 (inverno)", title: "A Mudança Começa", description: "O reino de Alberetor está devastado: fome, pragas e terras corrompidas. O assentamento bárbaro de Kadizar se rende e é usado como base de Korinthia na terra nova. Começa a Grande Migração, e centenas de milhares cruzam as Montanhas Titãs rumo ao norte.", type: "turning" },
-  { year: "Ano 5", title: "Estabelecimento de Ambria", description: "Os ducados do novo reino são estabelecidos, das Corvos a leste ao rio Eblis no oeste. A capital é construída sobre as ruínas de Lindaros e recebe o nome de Yndaros, em honra ao Rei Ynedar.", type: "ambria" },
-  { year: "Ano 7", title: "Ambria é Proclamada", description: "A Rainha chega oficialmente e o novo reino, assim como a capital, ganha seu nome: Ambria, 'o brilhante'. As leis, a nobreza e as instituições são formalizadas.", type: "ambria" },
-  { year: "Ano 8", title: "Catedral dos Mártires", description: "A Catedral dos Mártires em Yndaros é inaugurada, consagrando a memória dos caídos na Grande Guerra e simbolizando a devoção ambriana a Prios.", type: "ambria" },
-  { year: "Ano 10", title: "Destruição do Clã Jezora", description: "O exército real destrói o clã Jezora e seu chefe, o lorde de guerra Haloban, é executado na Praça do Triunfo em Yndaros. O domínio ambriano se consolida nas planícies.", type: "ambria" },
-  { year: "Ano 11", title: "Oitavo Ducado Estabelecido", description: "Um oitavo ducado é estabelecido e sua cidade principal, Sevona, é fundada. O ducado é confiado ao Duque Alesaro Kohinoor, tio da Rainha.", type: "ambria" },
-  { year: "Ano 13", title: "Fundação do Forte do Cardo", description: "Lasifor Campo Noturno cura a mãe da Rainha com Cardo-do-Crepúsculo colhido nas profundezas de Davokar. Recebe o título de Príncipe do Reino e usa a recompensa para construir Forte do Cardo na fronteira da floresta, um porto seguro de exploradores e caçadores de fortuna.", type: "ambria" },
-  { year: "Ano 15", title: "Batalha e Acordo de Karvosti", description: "A batalha de Karvosti resulta em um acordo no qual a Igreja do Sol recebe permissão para restaurar as ruínas do templo no platô sagrado dos bárbaros. Licenças de exploração da Davokar são formalizadas.", type: "conflict" },
-  { year: "Ano 16", title: "Ascensão de Jeseebegai", description: "O Primeiro Padre Jeseebegai, o mesmo Demeon Soleij que resgatou a Rainha do cativeiro, ascende ao Alto Mandato da Igreja do Sol. A Cúria precisou de apenas uma hora para proclamar sua ascensão.", type: "ambria" },
-  { year: "Ano 19", title: "Decreto das Guildas", description: "A Rainha dita que todos os artesãos devem se organizar em guildas, formalizando o comércio e a produção no reino.", type: "ambria" },
-  { year: "Ano 21", title: "Dias Atuais", description: "Ambria se expande agressivamente. Tensões crescem entre ambrianos, bárbaros e elfos. A Davokar parece despertar, com criaturas mais agressivas e corrupção se espalhando. A ameaça crescente dos poderes corruptos pode exigir que as alianças mais improváveis sejam forjadas.", type: "present" },
+  { year: "Séculos Atrás", title: "A Queda de Symbaroum", description: "O formidável império de Symbaroum, que dominava com sua magia e proeza a vasta região da atual floresta Davokar, ruiu. Dizem as lendas que seu último imperador irritou poderes maiores, selando o destino da nação e deixando suas maravilhas e horrores perdidos no tempo.", type: "ancient" },
+  { year: "Séculos Atrás", title: "União dos Clãs Bárbaros", description: "Pela primeira vez na história, os clãs descendentes de Symbaroum se unem sob o estandarte de um único Alto Chefe no platô de Karvosti para combater o terrível Rei Aranha e suas hordas aracnídeas.", type: "ancient" },
+  { year: "Dois Séculos Atrás", title: "O Extermínio de Lindaros", description: "Uma praga hemorrágica varre a próspera cidade-estado de Lindaros, localizada na planície sul de Davokar. A população inteira é exterminada e a cidade considerada amaldiçoada.", type: "ancient" },
+  { year: "Ano -21", title: "A Sombra dos Lordes Negros", description: "Nobres sedentos por poder de Alberetor abraçam artes arcanas obscuras e tornam-se os Lordes Negros. Sua primeira investida resulta na conquista da província fronteiriça de Berendoria, iniciando uma era de dor.", type: "war" },
+  { year: "Ano -19", title: "O Início da Grande Guerra", description: "Alberetor reúne suas forças e a Grande Guerra estoura oficialmente. Magia necrótica reanima os mortos; soldados do reino veem-se forçados a lutar contra os próprios companheiros caídos no campo de batalha.", type: "war" },
+  { year: "Ano -10", title: "A Morte de Ynedar e a Coroação", description: "Rei Ynedar tomba em batalha. Sua filha, Korinthia, é coroada rainha com apenas doze anos. Ela empunha a lança do pai e cavalga seu corcel lendário, Mestre, para liderar os exércitos ambrianos contra as trevas.", type: "war" },
+  { year: "Ano -5", title: "Prios Elevado a Uno", description: "Enquanto as trevas assolam a terra, a Igreja eleva Prios, o Deus Sol, a divindade única de Alberetor, banindo as velhas crenças para dar lugar à Lei de Prios, a luz guia na escuridão.", type: "war" },
+  { year: "Ano -2", title: "A Captura da Rainha", description: "Após a morte de sua leal montaria por uma lança envenenada, a Rainha Korinthia é capturada pelos Lordes Negros. Seus exércitos lutam com fervor implacável, preferindo a morte a deixá-la nas mãos do inimigo.", type: "war" },
+  { year: "Ano 0 (Outono)", title: "O Resgate e o Fim", description: "O clérigo Demeon Soleij caminha nu através das chamas profanas da fortaleza dos Lordes Negros e resgata Korinthia. Desfigurada, ela passa a usar uma máscara de porcelana vitrificada e ganha o título de Ruína da Noite. Os Lordes Negros são derrotados e a guerra termina.", type: "turning" },
+  { year: "Ano 0 (Inverno)", title: "A Grande Mudança", description: "Fome, solo estéril e pragas consumem Alberetor. Korinthia ordena a marcha ao norte através das Montanhas Titãs em direção à Terra Prometida, outrora sob o domínio de Lindaros.", type: "turning" },
+  { year: "Ano 5", title: "A Fundação de Yndaros", description: "O novo reino ganha fundações reais. Sobre a terra sangrenta e as ruínas de Lindaros, a nova capital é erguida e batizada de Yndaros, em homenagem ao falecido Rei Ynedar.", type: "ambria" },
+  { year: "Ano 7", title: "O Triunfo de Ambria", description: "A Rainha Korinthia e sua corte chegam ao novo reino. Ele é oficialmente declarado 'Ambria', o Brilhante, demarcando as fronteiras entre os clãs bárbaros ao norte e os novos ducados.", type: "ambria" },
+  { year: "Ano 8", title: "A Catedral dos Mártires", description: "Concluída a grande construção religiosa na Praça do Triunfo, a Catedral consagra as almas de todos os caídos na Grande Guerra. Prios firma suas raízes definitivas no coração ambriano.", type: "ambria" },
+  { year: "Ano 10", title: "A Ruína do Clã Jezora", description: "A Coroa Ambriana esmaga as forças bárbaras do clã Jezora. O temido Lorde de Guerra Haloban é capturado, levado a Yndaros e executado publicamente na Praça do Triunfo.", type: "ambria" },
+  { year: "Ano 11", title: "O Oitavo Ducado", description: "As terras de Sevona são consolidadas como o oitavo ducado ambriano e confiadas ao Tio da Rainha, o Duque Alesaro Kohinoor.", type: "ambria" },
+  { year: "Ano 13", title: "O Forte do Cardo É Construído", description: "Lasifor Campo Noturno recebe favores da Coroa após curar a mãe da Rainha com ingredientes da floresta. Com sua recém-adquirida fortuna, Lasifor ergue o lendário Forte do Cardo na borda de Davokar.", type: "ambria" },
+  { year: "Ano 15", title: "O Acordo do Templo", description: "Um tratado tenso no platô de Karvosti cede à Igreja de Prios o direito de restaurar um antigo templo nas terras sagradas bárbaras. Ao mesmo tempo, Yndaros decreta a Lei das Licenças de Explorador.", type: "conflict" },
+  { year: "Ano 16", title: "O Ataque dos Templários e Ascensão", description: "Os Cavaleiros Templários da Igreja tentam tomar todo o platô de Karvosti pela força de armas, sendo humilhantemente rechaçados pelos guardas da Ira e clãs. No mesmo ano, o herói Demeon Soleij assume como Primeiro Padre Jeseebegai.", type: "conflict" },
+  { year: "Ano 19", title: "Decreto das Guildas", description: "Para frear os crescentes conflitos comerciais por falta de leis trabalhistas em Ambria, a Rainha impõe um sistema rígido de Guildas sobre todos os artesãos e produtores mercantes do reino.", type: "ambria" },
+  { year: "Ano 20", title: "A Rebelião de Nova Dekanor", description: "No final da primavera, o Barão Mergai declara o Baronato de Nova Dekanor independente e se intitula 'Rei'. A Coroa o acusa de traição e a Igreja do Sol o condena à morte como herege, enviando os Templários.", type: "conflict" },
+  { year: "Ano 21", title: "Dias Atuais", description: "A floresta Davokar desperta enquanto as tensões explodem em todos os lados. Os elfos intensificam a matança através do Pacto de Ferro, abominações emergem do Abismo Verde, e caçadores de fortuna preparam-se para a letal expedição a Symbar.", type: "present" },
 ];
 
 const typeColors: Record<string, string> = {
@@ -103,38 +104,42 @@ export default function TimelineSection() {
       </Card>
 
       {/* Key Concepts */}
-      <div className="grid md:grid-cols-3 gap-4">
-        <Card className="bg-card border-border">
-          <CardContent className="p-4">
-            <h4 className="text-sm font-bold text-purple-300 mb-2">Symbaroum (Civilização Antiga)</h4>
+      <div className="grid md:grid-cols-3 gap-6">
+        <Card className="bg-card border-border shadow-lg">
+          <CardContent className="p-6">
+            <h4 className="text-xl font-bold text-purple-300 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Symbaroum
+            </h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Império humano que existiu há mais de mil anos. Dominava magia poderosa e construiu cidades magníficas. 
-              Caiu por razões desconhecidas; lendas falam de um último imperador que irritou algum ser supremo. 
-              Suas ruínas jazem sob Davokar. A cidade perdida de Symbar, sua capital, é o sonho de todo explorador, 
-              mas ninguém que a buscou retornou com histórias críveis.
+              O império perdido cuja majestade ainda assombra os sonhos dos tolos. Dominava vasta extensão da terra onde hoje reside a floresta Davokar, 
+              controlando magia primordial e abrigando metrópoles grandiosas. Seus segredos caíram após a arrogância do seu último imperador corromper a terra;
+              a mítica cidade de <strong className="text-purple-200/80">Symbar</strong>, o coração deste reino, continua sendo a perdição de qualquer caçador de fortunas fútil o suficiente para procurá-la.
             </p>
           </CardContent>
         </Card>
-        <Card className="bg-card border-border">
-          <CardContent className="p-4">
-            <h4 className="text-sm font-bold text-red-300 mb-2">Os Lordes Negros</h4>
+        <Card className="bg-card border-border shadow-lg">
+          <CardContent className="p-6">
+            <h4 className="text-xl font-bold text-red-400 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Os Lordes Negros
+            </h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Nobres e feiticeiros de Alberetor que abraçaram poderes proibidos. Comandavam mortos-vivos e abominações. 
-              Devastaram Alberetor por cerca de 20 anos. Sua fortaleza foi destruída na ofensiva final, mas 
-              os que estiveram lá se lembram dos horrores. Os ambrianos tentam olhar adiante, 
-              determinados a crescer tão fortes que ninguém ouse atacá-los novamente.
+              Membros da alta nobreza e estudiosos mágicos de Alberetor que trocaram suas almas pela promessa de poder absoluto.
+              Com as trevas, forjaram legiões infindáveis com os cadáveres de seus conterrâneos. Ainda que a fortaleza negra 
+              tenha sucumbido ao fogo sagrado de Prios e aos exércitos da Rainha, a cicatriz que deixaram na psique humana garante 
+              que Ambria jamais esquecerá que o preço da fraqueza é o fim do mundo.
             </p>
           </CardContent>
         </Card>
-        <Card className="bg-card border-border">
-          <CardContent className="p-4">
-            <h4 className="text-sm font-bold text-blue-300 mb-2">A Rainha Korinthia</h4>
+        <Card className="bg-card border-border shadow-lg">
+          <CardContent className="p-6">
+            <h4 className="text-xl font-bold text-blue-300 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              A Coroa de Ambria
+            </h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Filha do Rei Ynedar, coroada durante a guerra com não mais que doze anos. 
-              Sobreviveu a dois anos de cativeiro, resgatada por Demeon Soleij. 
-              Usa máscara de porcelana vitrificada sobre o rosto lacerado. Liderou A Mudança e fundou Ambria. 
-              Rumores sussurrados dizem que morreu no cativeiro e a mulher por trás da máscara é outra, 
-              mas ninguém ousa dizê-lo em voz alta.
+              A Rainha Korinthia Kohinoor, coroada em meio à catástrofe com apenas doze anos.
+              Chamada de a <strong className="text-blue-200/80">Ruína da Noite</strong> após sobreviver ao terror do cativeiro nos salões necróticos de Alberetor. 
+              Hoje, lidera seu povo de Yndaros, mascarando seu rosto eternamente ferido sob porcelana fria. Ela é o símbolo supremo da 
+              resistência e conquista ambriana.
             </p>
           </CardContent>
         </Card>
