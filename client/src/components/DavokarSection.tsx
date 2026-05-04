@@ -28,8 +28,8 @@ export default function DavokarSection() {
       {/* Map */}
       <Card className="bg-card border-border overflow-hidden">
         <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663622705168/KdzVCAjsftQjBG3jYgoaKD/map-stylized-DXF9ZKpgJG68KqweqHE9iS.webp"
-          alt="Mapa de Davokar"
+          src="/images/Mapa.png"
+          alt="Mapa Oficial de Davokar"
           className="w-full max-h-[500px] object-contain bg-amber-950/20 p-2"
         />
       </Card>

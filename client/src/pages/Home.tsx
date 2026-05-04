@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -16,19 +16,20 @@ import {
   Package,
   UserPlus,
 } from "lucide-react";
-import TimelineSection from "@/components/TimelineSection";
-import DavokarSection from "@/components/DavokarSection";
-import FactionsSection from "@/components/FactionsSection";
-import RacesSection from "@/components/RacesSection";
-import GameSystemSection from "@/components/GameSystemSection";
-import LocationsSection from "@/components/LocationsSection";
-import CorruptionSection from "@/components/CorruptionSection";
-import AbilitiesSection from "@/components/AbilitiesSection";
-import PowersSection from "@/components/PowersSection";
-import EquipmentSection from "@/components/EquipmentSection";
-import CharacterCreationSection from "@/components/CharacterCreationSection";
-import SpiritualitySection from "@/components/SpiritualitySection";
-import ImageGallerySection from "@/components/ImageGallerySection";
+const TimelineSection = lazy(() => import("@/components/TimelineSection"));
+const DavokarSection = lazy(() => import("@/components/DavokarSection"));
+const FactionsSection = lazy(() => import("@/components/FactionsSection"));
+const RacesSection = lazy(() => import("@/components/RacesSection"));
+const GameSystemSection = lazy(() => import("@/components/GameSystemSection"));
+const LocationsSection = lazy(() => import("@/components/LocationsSection"));
+const CorruptionSection = lazy(() => import("@/components/CorruptionSection"));
+const SpiritualitySection = lazy(() => import("@/components/SpiritualitySection"));
+
+// const AbilitiesSection = lazy(() => import("@/components/AbilitiesSection"));
+// const PowersSection = lazy(() => import("@/components/PowersSection"));
+// const EquipmentSection = lazy(() => import("@/components/EquipmentSection"));
+// const CharacterCreationSection = lazy(() => import("@/components/CharacterCreationSection"));
+// const ImageGallerySection = lazy(() => import("@/components/ImageGallerySection"));
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(() => {
@@ -156,26 +157,29 @@ export default function Home() {
 
       {/* Content */}
       <main className="container py-8 md:py-12">
-        <motion.div
-          key={activeSection}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {activeSection === "historia" && <TimelineSection />}
-          {activeSection === "geografia" && <DavokarSection />}
-          {activeSection === "locais" && <LocationsSection />}
-          {activeSection === "faccoes" && <FactionsSection />}
-          {activeSection === "espiritualidade" && <SpiritualitySection />}
-          {activeSection === "racas" && <RacesSection />}
-          {activeSection === "corrupcao" && <CorruptionSection />}
-          {activeSection === "sistema" && <GameSystemSection />}
-          {/* {activeSection === "habilidades" && <AbilitiesSection />}
-          {activeSection === "poderes" && <PowersSection />}
-          {activeSection === "equipamentos" && <EquipmentSection />}
-          {activeSection === "criacao" && <CharacterCreationSection />}
-          {activeSection === "galeria" && <ImageGallerySection />} */}
-        </motion.div>
+        <Suspense fallback={
+          <div className="flex justify-center items-center h-64 text-amber-200/50">
+            <div className="animate-pulse flex flex-col items-center">
+              <span className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Lendo pergaminhos...</span>
+            </div>
+          </div>
+        }>
+          <motion.div
+            key={activeSection}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {activeSection === "historia" && <TimelineSection />}
+            {activeSection === "geografia" && <DavokarSection />}
+            {activeSection === "locais" && <LocationsSection />}
+            {activeSection === "faccoes" && <FactionsSection />}
+            {activeSection === "espiritualidade" && <SpiritualitySection />}
+            {activeSection === "racas" && <RacesSection />}
+            {activeSection === "corrupcao" && <CorruptionSection />}
+            {activeSection === "sistema" && <GameSystemSection />}
+          </motion.div>
+        </Suspense>
       </main>
 
       {/* Footer */}
