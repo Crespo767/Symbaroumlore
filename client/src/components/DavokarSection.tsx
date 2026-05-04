@@ -1,8 +1,77 @@
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ZoomIn, ZoomOut, Maximize, Lock, Unlock } from "lucide-react";
 
 export default function DavokarSection() {
+  const [scale, setScale] = useState(1);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [isLocked, setIsLocked] = useState(true);
+  const dragStart = useRef({ x: 0, y: 0 });
+
+  const handleZoomIn = () => {
+    setIsLocked(false);
+    setScale(prev => Math.min(prev + 0.5, 4));
+  };
+  const handleZoomOut = () => {
+    setIsLocked(false);
+    setScale(prev => {
+      const newScale = Math.max(prev - 0.5, 1);
+      if (newScale === 1) setPosition({ x: 0, y: 0 });
+      return newScale;
+    });
+  };
+  
+  const handleReset = () => {
+    setScale(1);
+    setPosition({ x: 0, y: 0 });
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (isLocked || scale <= 1) return;
+    setIsDragging(true);
+    dragStart.current = { x: e.clientX - position.x, y: e.clientY - position.y };
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    setPosition({
+      x: e.clientX - dragStart.current.x,
+      y: e.clientY - dragStart.current.y,
+    });
+  };
+
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (isLocked || scale <= 1) return;
+    if (e.touches.length === 1) {
+      setIsDragging(true);
+      dragStart.current = { x: e.touches[0].clientX - position.x, y: e.touches[0].clientY - position.y };
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || e.touches.length !== 1) return;
+    setPosition({
+      x: e.touches[0].clientX - dragStart.current.x,
+      y: e.touches[0].clientY - dragStart.current.y,
+    });
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    if (isLocked) return;
+    
+    // Zoom in on scroll up, zoom out on scroll down
+    if (e.deltaY < 0) {
+      handleZoomIn();
+    } else {
+      handleZoomOut();
+    }
+  };
+
   return (
     <div className="space-y-8">
       <div className="mb-8">
@@ -26,16 +95,63 @@ export default function DavokarSection() {
       </div>
 
       {/* Map */}
-      <Card className="bg-card border-border overflow-hidden rounded-md">
-        <div className="relative w-full" style={{ paddingBottom: "2%" }}>
-          {/* Removing bottom border by using clipPath or an inner div that hides the bottom slightly, and removing dark padding */}
-          <img
-            src="/images/Mapa.png"
-            alt="Mapa Oficial de Davokar"
-            className="w-full max-h-[500px] object-contain object-top"
-            style={{ clipPath: "inset(0 0 10px 0)" }}
-            loading="lazy"
-          />
+      <Card className="bg-card border-border overflow-hidden rounded-md relative group shadow-lg">
+        {/* Map Controls */}
+        <div className="absolute top-4 right-4 z-20 flex flex-col md:flex-row gap-2">
+          <button 
+            onClick={() => {
+              if (!isLocked) handleReset();
+              setIsLocked(!isLocked);
+            }} 
+            className={`p-2 rounded-md shadow-md backdrop-blur-sm transition-colors flex items-center justify-center gap-2
+              ${isLocked ? 'bg-red-900/80 text-red-100 hover:bg-red-800 border-red-900/50' : 'bg-green-900/80 text-green-100 hover:bg-green-800 border-green-900/50'}`} 
+            title={isLocked ? "Desbloquear Mapa (Habilita Scroll)" : "Bloquear Mapa (Desabilita Scroll)"}
+          >
+            {isLocked ? <Lock className="w-4 h-4 md:w-5 md:h-5" /> : <Unlock className="w-4 h-4 md:w-5 md:h-5" />}
+          </button>
+          
+          <button onClick={handleZoomIn} className="bg-background/90 hover:bg-secondary border border-border p-2 rounded-md shadow-md backdrop-blur-sm text-foreground transition-colors" title="Aumentar Zoom">
+            <ZoomIn className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+          <button onClick={handleZoomOut} className="bg-background/90 hover:bg-secondary border border-border p-2 rounded-md shadow-md backdrop-blur-sm text-foreground transition-colors" title="Diminuir Zoom">
+            <ZoomOut className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+          <button onClick={handleReset} className="bg-background/90 hover:bg-secondary border border-border p-2 rounded-md shadow-md backdrop-blur-sm text-foreground transition-colors" title="Restaurar Visão">
+            <Maximize className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+        </div>
+
+        {/* Map Container */}
+        <div 
+          className="relative w-full h-[400px] md:h-[600px] overflow-hidden bg-[#0a0a0a] rounded-b-md select-none touch-none"
+          onWheel={handleWheel}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleMouseUp}
+          onTouchCancel={handleMouseUp}
+          style={{ cursor: isLocked ? "default" : (scale > 1 ? (isDragging ? "grabbing" : "grab") : "default") }}
+        >
+          <div 
+            className="w-full h-full flex items-center justify-center transition-transform"
+            style={{ 
+              transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+              transitionDuration: isDragging ? '0ms' : '200ms',
+              transitionTimingFunction: 'ease-out'
+            }}
+          >
+            <img
+              src="/images/Mapa.png"
+              alt="Mapa Oficial de Davokar"
+              className="w-full h-full object-contain pointer-events-none"
+              style={{ clipPath: "inset(0 0 10px 0)" }}
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
         </div>
       </Card>
 
