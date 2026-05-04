@@ -9,13 +9,13 @@ const factions = [
     color: "text-blue-300",
     borderColor: "border-l-blue-600",
     bgColor: "bg-blue-950/20",
-    description: "Ambria é governada pela Rainha Korinthia e dividida em sete ducados. A Corte em Yndaros dita o ritmo do novo império, mas as intrigas entre as Casas Nobres ameaçam a frágil paz. Nobres famintos por glória e recursos lutam por influência na Cúria e na exploração de Davokar.",
+    description: "Ambria é um império recém-forjado pelo fogo e pelo luto, governado pela Rainha Korinthia e dividido em sete ducados formados após a fuga de Alberetor. A Corte em Yndaros dita o ritmo de expansão, mas as intrigas constantes entre as Casas Nobres ameaçam a frágil união humana.",
     details: [
-      "Korinthia Kohinoor, a Matadora da Noite — venerada quase como divindade. Resgatada dos Lordes Negros após anos de cativeiro na queda de Alberetor.",
-      "Duque Alesaro Kohinoor (Nova Berendoria) — tio de Korinthia que ressentidamente esperava herdar o trono durante a prisão dela.",
-      "Duquesa Esmerelda (Kasandrien) — meia-irmã mais nova de Korinthia, sede da Ordo Magica em Agrella.",
-      "Duque Ynedar (Nova Beretor) — sobrinho da Rainha, jovem líder com visão diplomática, mantendo boas relações com os bárbaros de Odaiova.",
-      "O Grande Ducado de Yndarien detém a capital e abriga cerca de 40% de toda a população ambriana."
+      "Rainha Korinthia Kohinoor, a Matadora da Noite — venerada quase como divindade. Resgatada dos Lordes Negros após anos de cativeiro na queda de Alberetor, ela governa com mão de ferro.",
+      "A Disputa dos Ducados — Ambria é dividida em ducados comandados por sobreviventes e generais da Grande Guerra. O Grande Ducado de Yndarien detém a capital e abriga 40% da população.",
+      "Duque Alesaro Kohinoor (Nova Berendoria) — Tio de Korinthia que assumiu a regência durante seu cativeiro e agora governa de forma ressentida e ambiciosa.",
+      "Duque Ynedar (Nova Beretor) — O jovem sobrinho da Rainha, idealista, mantendo as mais promissoras relações diplomáticas com os clãs bárbaros (principalmente Odaiova).",
+      "Duquesa Esmerelda (Kasandrien) — A meia-irmã mais nova de Korinthia, regendo Agrella, um ducado famoso pela cultura, festas e por abrigar grandes mentes da Ordo Magica."
     ]
   },
   {
@@ -24,12 +24,12 @@ const factions = [
     color: "text-amber-300",
     borderColor: "border-l-amber-600",
     bgColor: "bg-amber-950/20",
-    description: "Durante a Grande Guerra, o Sol tornou-se o Uno e o Doador das Leis. A Igreja prega que Prios está morrendo pela negligência humana, e a Davokar deve ser expurgada e cultivada para reavivar Sua chama. A Igreja de Prios governa um domínio próprio tão rico quanto um ducado.",
+    description: "Durante a devastadora Grande Guerra, a religião mudou: o Sol tornou-se o Uno e o Doador das Leis, e todos os outros deuses foram abandonados. A Igreja prega o dogma do 'Sol Moribundo' — a crença de que Prios está morrendo pela negligência humana, e a floresta de Davokar deve ser expurgada para reavivar Sua luz divina.",
     details: [
-      "Primeiro Padre Jeseebegai — marcado e ferrenho líder da Cúria, herói que invadiu as trevas para libertar Korinthia. Vive sob paranoia crescente.",
-      "Templários (Cavaleiros do Sol Moribundo) — O braço armado, implacável e dogmático, liderado pelo Primeiro Comandante Iakobo Vearra.",
-      "Frades do Crepúsculo (Mantos Negros) — A temida Inquisição. Especialistas ocultos em demonologia sob a égide do Irmão Eumenos. Operam com grande autonomia.",
-      "A Igreja decreta Leis solares rígidas, financiando 'Cruzadas' não oficiais contra feitiçaria, cultos, elfos e abominações."
+      "Primeiro Padre Jeseebegai — Líder Supremo da Cúria em Templewall. Um herói ferrenho, cego e marcado pelas chamas das trevas, cujo governo tem se tornado cada vez mais extremista e paranoico.",
+      "Templários (Cavaleiros do Sol Moribundo) — O braço armado e dogmático, liderado pelo Primeiro Comandante Iakobo Vearra, agindo como juízes, júris e executores contra abominações e hereges.",
+      "Frades do Crepúsculo (Mantos Negros) — A temida Inquisição. Monges eruditos e especialistas ocultos em demonologia sob a égide do Irmão Eumenos. Operam do mosteiro dos Titãs com grande autonomia.",
+      "As Leis Solares e as 'Cruzadas' — A Igreja financia expedições não oficiais contra cultistas, elfos e forças místicas que não se curvam à luz, frequentemente colidindo com a Ordo Magica."
     ]
   },
   {
@@ -38,12 +38,12 @@ const factions = [
     color: "text-purple-300",
     borderColor: "border-l-purple-600",
     bgColor: "bg-purple-950/20",
-    description: "A mais proeminente e elitista ordem mística. Movem-se pela filosofia e por evidências matemáticas, repudiando a 'fé cega' dos teurgos. Buscam explorar Davokar para recuperar os tesouros e a magia arcaica do Império de Symbaroum.",
+    description: "A mais proeminente e elitista ordem mística, financiada por nobres e pela Coroa. Eles se movem por evidências matemáticas, repudiando a 'fé cega' dos teurgos e as superstições bárbaras. Buscam explorar as ruínas de Davokar para extrair tesouros, alquimia avançada e o conhecimento arcaico do Império de Symbaroum.",
     details: [
-      "Grande Mestre Seldonio — supostamente centenário. Passa a maior parte de seu tempo trancafiado no Capítulo de Yndaros.",
-      "Os Mestres de Capítulo dominam esferas teóricas: Magismo, Artefatos, Botânica, e Estudos Élficos e Bestiais.",
-      "Possuem o Vivisectório em Yndaros, uma arena de anatomia onde realizam dissecações públicas de abominações e Trolls, muitas vezes chocando (e fascinando) os ambrianos.",
-      "Sofrem pressão da Igreja de Prios para abandonarem pesquisas consideradas 'heréticas'."
+      "Grande Mestre Seldonio — Centenário líder absoluto da ordem. Passa a maior parte de seu tempo trancafiado e protegido no monumental Capítulo de Yndaros.",
+      "Os Mestres de Capítulo — Guiam filiais em cada grande cidade. Destacam-se Magos Magistrais (Kullinan Furia) e Mestra Cornélia (em Forte do Cardo), pesquisando Artefatos, Botânica e Estudos Élficos.",
+      "O Vivisectório — Um salão em Yndaros onde magos realizam dissecações públicas de abominações e Trolls mortos, frequentemente chocando a Cúria de Prios.",
+      "Tensões Religiosas — A Ordem é constantemente supervisionada pelos Frades do Crepúsculo, que pressionam para que pesquisas sobre Corrupção e feitiçaria sejam proibidas."
     ]
   },
   {
@@ -52,12 +52,12 @@ const factions = [
     color: "text-emerald-300",
     borderColor: "border-l-emerald-500",
     bgColor: "bg-emerald-950/20",
-    description: "Um antigo tratado e uma coalizão militar de elfos da Davokar. O Pacto alega que príncipes humanos assinaram o acordo com anéis de ferro para nunca adentrar a Davokar e não despertar os horrores de Symbaroum. Ambria ignora este tratado, o que resulta em mortes diárias.",
+    description: "Um antigo tratado misterioso e uma coalizão militar de elfos. O Pacto alega que os príncipes originais da humanidade juraram com anéis de ferro nunca mais adentrar a Davokar para não despertar os horrores incontroláveis de Symbaroum. Ambria hoje ignora o tratado, resultando em uma guerra florestal sangrenta.",
     details: [
-      "Emissário Elori — Representante do Pacto isolado em Yndaros, tolerado pela Coroa mas assediado pelo povo e pela Igreja.",
-      "Príncipes Élficos — Os verdadeiros comandantes da floresta, liderando forças de Elfos do Verão para abater invasores impiedosamente.",
-      "Aloéna — Uma figura misteriosa e semideusa gigante que reside no bosque de Karvosti; mais antiga que os próprios elfos, ela é o coração místico da floresta.",
-      "O Pacto sofre uma tragédia demográfica constante: seu número é finito e cada elfo morto em combate não pode ser reposto facilmente."
+      "O Ciclo de Vida Élfico — Elfos começam como Fadas (Primavera), transformam-se em impiedosos guerreiros Elfos do Verão, evoluem para Elfos do Outono (diplomatas e líderes) e, muito raramente, atingem a misteriosa e transcendental fase do Inverno.",
+      "Príncipes Élficos — Os verdadeiros comandantes dos Salões da floresta, orquestrando as letais caçadas contra aventureiros e mercenários ambrianos.",
+      "Aloéna e os Bosques de Karvosti — Uma semideusa monumental que reside em um bosque inviolável. Ela é uma força da própria natureza, anterior aos elfos, e representa a vontade silenciosa da Davokar.",
+      "Emissário Elori — O único representante elfo em Yndaros. Ele vive isolado em uma embaixada, suportando ameaças diárias para atrasar uma guerra total entre as raças."
     ]
   },
   {
@@ -82,12 +82,12 @@ const factions = [
     color: "text-slate-300",
     borderColor: "border-l-slate-500",
     bgColor: "bg-slate-950/20",
-    description: "Os soldados de Ambria são veteranos disciplinados forjados contra os exércitos das trevas de Alberetor. Divididos em infantaria pesada, piquetes, cavalaria blindada e patrulheiros de elite que supervisionam as matas sombrias.",
+    description: "Veteranos endurecidos forjados nos horrores da guerra contra os Lordes Negros em Alberetor. As Forças Armadas de Ambria estão agora em processo de transição, vigiando a sombria fronteira florestal, controlando rebeliões dos Colonos Livres e exterminando ameaças inumanas que cruzam a divisa da floresta.",
     details: [
-      "Marechal de Campo Beremo Herengol — veterano de 70 anos cujo vigor parece inexplicavelmente congelado no tempo.",
-      "Os Pansars — A temida Guarda Pessoal da Rainha Korinthia, a elite da cavalaria de choque sob o general Jomilo.",
-      "Patrulheiros da Rainha — Comandados pela Coronel Revina Kalfas. Especialistas em espionagem, sobrevivência na Davokar e extermínio focado de grupos elfos hostis.",
-      "Constante disputa logística com a Ordem dos Templários, que preferiria guiar todos os soldados de Ambria como ferramentas de Prios."
+      "O Comando Maior e as 6 Divisões — O exército é liderado pelo Marechal de Campo Beremo Herengol, um veterano de 70 anos incansável. É sustentado pelos ducados e composto por infantaria, piqueiros, arqueiros e artilharia de cerco.",
+      "Os Pansars — A lendária, ostentosa e temida Guarda Pessoal da Rainha Korinthia, os cavaleiros de elite liderados pelo formidável General Jomilo.",
+      "Patrulheiros da Rainha — Comandados pela tática Coronel Revina Kalfas. São as tropas de vanguarda especializadas em emboscadas, sobrevivência na selva e rastreamento de Elfos e bestas.",
+      "Conflitos de Jurisdição — Existe uma rivalidade latente (e perigosa) entre o Exército Regular de Ambria e os exércitos privados financiados pela Igreja do Sol."
     ]
   },
   {
@@ -96,12 +96,12 @@ const factions = [
     color: "text-stone-300",
     borderColor: "border-l-stone-600",
     bgColor: "bg-stone-950/20",
-    description: "Nem todo ambriano aceitou submeter-se ao jugo da Rainha Korinthia e aos dogmas estritos da Igreja de Prios. Refugiados, desertores e visionários que preferiram o perigo da selva à tirania da cidade de Yndaros.",
+    description: "Nem todo ambriano aceitou submeter-se à tirania dos Ducados e aos dogmas extremistas da Igreja de Prios. Os Colonos Livres são desertores, refugiados sem teto e visionários pioneiros que fugiram para arriscar a vida estabelecendo comunidades não registradas nas bordas da selva selvagem.",
     details: [
-      "Habitam acampamentos dispersos e bem escondidos nos limites ou no interior da Davokar, somando cerca de 20 grandes assentamentos.",
-      "Adoram os Deuses Abolidos (O Desbravador, a Mãe Terra, o Executor), praticando rituais de agradecimento muito próximos às tradições bárbaras.",
-      "São frequentemente alvos mortais dos Mantos Negros, que os consideram hereges em potencial.",
-      "Trabalham em harmonia e trocas com alguns clãs, mas sofrem terrivelmente quando abominações de Davokar esbarram com suas cabanas."
+      "Os Assentamentos Rebeldes — Há dezenas de grandes acampamentos (cerca de 20 bem estabelecidos) escondidos na Davokar, sustentando-se de caça perigosa e comércio clandestino.",
+      "Os Deuses Abolidos — Muitos colonos rejeitaram Prios para venerar velhos panteões animistas de Alberetor (O Desbravador, a Mãe Terra, o Executor), aproximando-os culturalmente dos bárbaros.",
+      "Heréticos Perseguidos — Para a Igreja de Prios e a Coroa de Yndaros, os Colonos Livres não são pioneiros heroicos, mas hereges, criminosos, estelionatários e alvos frequentes da Inquisição.",
+      "Sobrevivência Frágil — Quando não são mortos pelas fogueiras dos Templários, os colonos frequentemente viram comida para bandos de bestas predadoras, arañas de Davokar ou elfos territorialistas."
     ]
   },
   {
@@ -110,12 +110,12 @@ const factions = [
     color: "text-red-300",
     borderColor: "border-l-red-600",
     bgColor: "bg-red-950/20",
-    description: "Um poder corrosivo e sombrio, não uma organização formal. Células de feitiçaria reúnem ex-cultistas de Alberetor, magos ambiciosos, bruxos isolados e feras de Symbaroum buscando reavivar velhos pesadelos.",
+    description: "Células secretas, dispersas e descentralizadas. Feiticeiros não pertencem a uma guilda única, mas são unidos pela ambição sombria, pela manipulação perversa da magia natural e pela disposição em abraçar a Corrupção em troca de poder bruto que pode desafiar o mundo mortal.",
     details: [
-      "Operam sob ritos de sangue carnal e sacrifícios em locais profanos como os esgotos da Velha Kadizar.",
-      "Simbaristas — Feiticeiros estudiosos e radicais que tentam desvendar a carne das Abominações e os segredos imortais de Symbaroum.",
-      "Os Soberanos Negros (Lordes das Trevas) — Embora Alberetor tenha triunfado, os resquícios e adoradores desses tiranos corrompidos ainda envenenam o reino no subúrbio.",
-      "A Praga da Corrupção: A feitiçaria suga a vida da natureza, deformando e transformando magos descuidados em Abominações bestiais e mortais."
+      "Simbaristas — Pesquisadores e arcanistas hereges (muitos caídos da Ordo Magica) fascinados pelo antigo Império; eles buscam dominar Abominações para atingir a imortalidade profana.",
+      "Cultistas dos Soberanos Negros (Lordes das Trevas) — Fanáticos e desertores que ainda honram os príncipes sombrios mortos em Alberetor, conspirando nos esgotos da Velha Kadizar para recriar as legiões demoníacas.",
+      "A Magia de Sangue e Profanação — Feiticeiros usam ritos sangrentos e sacrifícios humanos. Sua simples prática mancha o tecido da Davokar, escurecendo a terra.",
+      "Caçados e Desesperados — São os maiores alvos dos Caçadores de Bruxas, dos Templários e das próprias Bruxas Bárbaras. Um feiticeiro descoberto tem garantia de tortura e fogueira letal."
     ]
   },
   {
@@ -124,12 +124,12 @@ const factions = [
     color: "text-cyan-300",
     borderColor: "border-l-cyan-500",
     bgColor: "bg-cyan-950/20",
-    description: "Um grupo mercenário e capitalista baseado no infame Forte do Cardo. Exploradores, arqueólogos sem escrúpulos e mercenários cuja vida é invadir ruínas bárbaras para saciar a sede ambriana por ouro e mistérios.",
+    description: "Uma vasta guilda mercenária capitalista alicerçada no icônico Forte do Cardo (Thistle Hold). Reunindo arqueólogos brutais, mercenários veteranos e contrabandistas endinheirados, eles fazem fortunas rasgando sepulturas e ruínas perigosas para saciar o apetite insaciável da nobreza por artefatos Symbaranos.",
     details: [
-      "Prefeito Lasifor Campo Noturno (Noite-Arca) — Um dos primeiros grandes exploradores e atual governante do Forte do Cardo, sempre protegido pelos brutais guardas de capacete-de-sapo.",
-      "Mãe Mehira — Ex-aventureira, perdeu braço e olho, e gerencia a mais rica agência mercenária e estalagem do Forte.",
-      "Licenças de Explorador — Impostos abusivos criados por Ambria que fomentaram um mercado clandestino sangrento e contrabandistas de relíquias.",
-      "Enfrentam a morte em três frentes: Elfos assassinos, bestas peçonhentas de Davokar, e a própria Corrupção ao tocar nos tesouros sombrios."
+      "Prefeito Lasifor Campo Noturno (Noite-Arca) — O infame e rico fundador do Forte do Cardo. Antigo aventureiro que lucrou imensamente com a floresta e agora governa a cidade mercenária cercado por guardas brutais.",
+      "Mãe Mehira — Ex-caçadora veterana que perdeu braço e olho para as sombras de Davokar. Hoje, gerencia a maior e mais respeitada agência mercenária e estalagem do Forte.",
+      "As Licenças de Explorador — Impostos caríssimos cobrados por agentes de Ambria para entrar em Davokar, criando um vasto e corrupto mercado clandestino de contrabandistas de relíquias.",
+      "A Febre de Davokar e as Baixas — Apesar do ouro, a Legação sofre mais mortes do que o próprio Exército, vítimas de armadilhas mortais Symbaranas, toxinas das feras, flechas élficas e a loucura da Corrupção."
     ]
   },
 ];
