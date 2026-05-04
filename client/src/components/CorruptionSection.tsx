@@ -77,6 +77,24 @@ const traditions = [
     corruptionNote: "Corrupção padrão. Trolls possuem alta resistência natural à corrupção.",
     powers: "Hino de Combate, Hino de Enfraquecimento, Hino Heroico, Confusão, Arma Dançante, Retribuição"
   },
+  {
+    name: "Magia do Cajado",
+    origin: "Guia Avançado",
+    color: "border-l-cyan-600",
+    bgColor: "bg-cyan-950/20",
+    desc: "Sub-tradição focada em combater a corrupção de perto, utilizando o cajado rúnico como foco mágico primário.",
+    corruptionNote: "Corrupção padrão.",
+    powers: "Anátema, Arma Dançante, Cajado Projétil, Esfera, Runas Protetivas"
+  },
+  {
+    name: "Simbolismo",
+    origin: "Guia Avançado",
+    color: "border-l-pink-600",
+    bgColor: "bg-pink-950/20",
+    desc: "Tradição metódica que usa inscrições místicas e sinais. Muito resistente à corrupção devido à natureza indireta da ativação dos poderes.",
+    corruptionNote: "Excepcionalmente seguro. Gera pouca ou nenhuma corrupção ao ativar símbolos preparados.",
+    powers: "Glifo de Drenagem, Runas Protetivas, Selo de Banimento, Símbolo Cegante, Escrita Distante"
+  },
 ];
 
 const chartData = corruptionStages.map(s => ({

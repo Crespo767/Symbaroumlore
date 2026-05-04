@@ -9,11 +9,20 @@ export default function DavokarSection() {
         <h2 className="text-3xl md:text-4xl text-amber-100 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>
           A Floresta Davokar
         </h2>
-        <p className="text-muted-foreground max-w-3xl leading-relaxed">
+        <p className="text-muted-foreground max-w-3xl leading-relaxed mb-4">
           Davokar é uma floresta diferente de todas — tão vasta que demora semanas ou meses para cruzá-la. 
           Os bárbaros têm mais de cem palavras para descrever suas diferentes partes. 
           Alguns a retratam como um ser pensante, um organismo faminto e esforçado.
         </p>
+        <blockquote className="text-sm md:text-base text-amber-200/90 italic leading-relaxed border-l-2 border-amber-500/50 pl-6 max-w-4xl" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          "Quem quer que você seja, de onde quer que venha, o que quer que acredite e pense que é capaz de realizar; nada disso importa! 
+          Já vi cavaleiros completamente armadurados calejados de batalhas chorarem de exaustão... Não, deixe eu te dizer, nem um braço forte 
+          nem uma cabeça cheia de sagacidade é capaz de sobreviver a Davokar... Sim, qualquer criança viveria melhor e mais tempo que o Rei Ladrão de Ambria, 
+          simplesmente trocando arrogância por precaução. Você pode zombar, suspirar e revirar seus olhos azuis, mas esteja avisado! 
+          Uma atitude bem desenvolvida, o tipo certo de instrução e equipamento não é o suficiente para o verdadeiro aventureiro. 
+          Com isso você pode começar, mas raramente é o suficiente para chegar a seu destino, e nunca é o suficiente para voltar, 
+          isso deve ser combinado com paciência, culhões e uma quantidade considerável de premeditação!"
+        </blockquote>
       </div>
 
       {/* Map */}
@@ -58,8 +67,8 @@ export default function DavokarSection() {
                     <li>• Frutas venenosas disfarçadas de comestíveis</li>
                     <li>• Atoleiros disfarçados de chão sólido</li>
                     <li>• Plantas carnívoras e vinhas com sede de sangue</li>
-                    <li>• Elfos da primavera com peças mortais</li>
-                    <li>• Elfos do verão com flechas certeiras</li>
+                    <li>• Fadas (prolelfos) com peças mortais</li>
+                    <li>• Elfos guerreiros com flechas certeiras</li>
                   </ul>
                 </div>
                 <div className="bg-green-950/20 rounded-md p-4 border border-green-900/30">

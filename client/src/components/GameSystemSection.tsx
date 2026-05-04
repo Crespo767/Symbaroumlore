@@ -21,7 +21,7 @@ const attributes = [
 ];
 
 const archetypes = [
-  { name: "Guerreiro", color: "#ef4444", ability: "Façanha de Força", desc: "Combatentes de linha de frente. Mestres de armas e armaduras. Dominam o campo de batalha com força bruta e técnica marcial.", occupations: "Cavaleiro, Duarr, Guarda da Ira*, Templário*" },
+  { name: "Guerreiro", color: "#ef4444", ability: "Façanha de Força", desc: "Combatentes de linha de frente. Mestres de armas e armaduras. Dominam o campo de batalha com força bruta e técnica marcial.", occupations: "Cavaleiro, Guarda da Ira*, Templário*" },
   { name: "Caçador", color: "#22c55e", ability: "Instinto do Caçador", desc: "Especialistas em combate à distância e rastreamento. Sobrevivem na natureza selvagem e caçam qualquer presa.", occupations: "Caçador de Monstros, Caçador de Recompensas, Jurado do Ferro*" },
   { name: "Ladino", color: "#8b5cf6", ability: "Golpe Baixo", desc: "Mestres da furtividade e astúcia. Sobrevivem pela esperteza, exploram fraquezas e atacam quando menos se espera.", occupations: "Ladrão, Espião, Explorador" },
   { name: "Místico", color: "#f59e0b", ability: "Dom Poderoso", desc: "Praticantes de magia e rituais. Canalizam forças sobrenaturais através de tradições místicas ancestrais.", occupations: "Bruxo, Magista, Teurgo, Necromante*, Piromante*, Tecelã Verde*" },

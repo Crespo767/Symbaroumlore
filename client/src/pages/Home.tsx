@@ -28,6 +28,7 @@ import PowersSection from "@/components/PowersSection";
 import EquipmentSection from "@/components/EquipmentSection";
 import CharacterCreationSection from "@/components/CharacterCreationSection";
 import SpiritualitySection from "@/components/SpiritualitySection";
+import ImageGallerySection from "@/components/ImageGallerySection";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("historia");
@@ -41,10 +42,11 @@ export default function Home() {
     { id: "racas", label: "Raças", icon: Users },
     { id: "corrupcao", label: "Corrupção", icon: Skull },
     { id: "sistema", label: "Sistema", icon: Sword },
-    // { id: "habilidades", label: "Habilidades", icon: Shield },
-    // { id: "poderes", label: "Poderes", icon: Wand2 },
-    // { id: "equipamentos", label: "Equipamentos", icon: Package },
-    // { id: "criacao", label: "Criar Personagem", icon: UserPlus },
+    { id: "habilidades", label: "Habilidades", icon: Shield },
+    { id: "poderes", label: "Poderes", icon: Wand2 },
+    { id: "equipamentos", label: "Equipamentos", icon: Package },
+    { id: "criacao", label: "Criar Personagem", icon: UserPlus },
+    { id: "galeria", label: "Galeria Visual", icon: Sparkles },
   ];
 
   return (
@@ -82,28 +84,31 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-8xl text-amber-100 mb-4"
+            className="text-5xl md:text-7xl lg:text-8xl text-amber-100 mb-6"
             style={{ fontFamily: "'Uncial Antiqua', cursive" }}
           >
             Symbaroum
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-lg md:text-xl text-amber-200/80 max-w-2xl"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="max-w-3xl"
           >
-            Guia Completo do Jogador, tudo que você precisa saber sobre o universo
-            de fantasia sombria sem spoilers
-          </motion.p>
+            <blockquote className="text-sm md:text-base lg:text-lg text-amber-200/90 italic leading-relaxed border-l-2 border-amber-500/50 pl-6 text-left" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              "Como um couraçado em uma tempestade de relâmpagos, ela cortou as ondas de escuridão e terror... 
+              Eu fui um dos poucos que ficaram maravilhados quando a primeira luz da aurora banhou sua armadura, 
+              transformando nossa jovem Rainha em um sol cavalgando e empunhando uma espada — Korinthia Ruína da Noite, nossa soberana. 
+              [...] Porque nós somos o povo de Korinthia Ruína da Noite e jamais seremos derrotados!"
+            </blockquote>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mt-4 text-xs text-amber-300/50 max-w-lg"
+            className="mt-6 text-xs text-amber-300/60 max-w-lg uppercase tracking-widest font-semibold"
           >
-            Baseado nos livros oficiais publicados pela Free League e Tria Editora
+            A Terra Prometida
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -159,10 +164,11 @@ export default function Home() {
           {activeSection === "racas" && <RacesSection />}
           {activeSection === "corrupcao" && <CorruptionSection />}
           {activeSection === "sistema" && <GameSystemSection />}
-          {/* {activeSection === "habilidades" && <AbilitiesSection />} */}
-          {/* {activeSection === "poderes" && <PowersSection />} */}
-          {/* {activeSection === "equipamentos" && <EquipmentSection />} */}
-          {/* {activeSection === "criacao" && <CharacterCreationSection />} */}
+          {activeSection === "habilidades" && <AbilitiesSection />}
+          {activeSection === "poderes" && <PowersSection />}
+          {activeSection === "equipamentos" && <EquipmentSection />}
+          {activeSection === "criacao" && <CharacterCreationSection />}
+          {activeSection === "galeria" && <ImageGallerySection />}
         </motion.div>
       </main>
 

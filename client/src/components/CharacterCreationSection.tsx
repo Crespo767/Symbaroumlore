@@ -44,7 +44,7 @@ const steps = [
     title: "Escolher Ocupação",
     desc: "A ocupação define o contexto narrativo e social do personagem. Algumas são Profissões com habilidades exclusivas.",
     details: [
-      "Guerreiro: Cavaleiro, Duarr, Guarda da Ira*, Templário*",
+      "Guerreiro: Cavaleiro, Guarda da Ira*, Templário*",
       "Caçador: Caçador de Monstros, Caçador de Recompensas, Jurado do Ferro*",
       "Ladino: Ladrão, Espião, Explorador",
       "Místico: Bruxo, Magista, Teurgo, Necromante*, Piromante*, Tecelã Verde*",
