@@ -148,31 +148,43 @@ export default function GameSystemSection() {
           <h3 className="text-lg font-bold text-amber-200 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Fluxo de Combate
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {combatFlow.map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-secondary/30 rounded p-3 border border-border"
-              >
-                <h4 className="text-sm font-bold text-amber-300 mb-1">{item.step}</h4>
-                <p className="text-xs text-muted-foreground">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-6 mb-4">
-            <img src="/images/Guia_Rapido_de_Combate.png" alt="Guia Rápido de Combate" className="w-full max-w-2xl mx-auto rounded-md shadow-lg border border-border" />
-          </div>
-          <div className="mt-4 grid md:grid-cols-2 gap-3">
-            <div className="bg-red-950/20 rounded p-3 border border-red-900/30">
-              <h4 className="text-sm font-bold text-red-300 mb-1">Ataque Livre</h4>
-              <p className="text-xs text-muted-foreground">Ao se afastar de um inimigo em combate corpo a corpo ou ao passar por um inimigo com arma Longa, o inimigo recebe um ataque gratuito.</p>
+          <div className="grid lg:grid-cols-2 gap-6 items-start">
+            {/* Coluna Esquerda: Imagem */}
+            <div className="order-2 lg:order-1">
+              <img 
+                src="/images/Guia_Rapido_de_Combate.png" 
+                alt="Guia Rápido de Combate" 
+                className="w-full h-auto rounded-md shadow-lg border border-border object-contain" 
+              />
             </div>
-            <div className="bg-amber-950/20 rounded p-3 border border-amber-900/30">
-              <h4 className="text-sm font-bold text-amber-300 mb-1">Limiar de Dor</h4>
-              <p className="text-xs text-muted-foreground">Quando a Vitalidade cai abaixo do Limiar de Dor, todas as rolagens ganham uma segunda chance de falha (role duas vezes, use o pior).</p>
+
+            {/* Coluna Direita: Informações */}
+            <div className="order-1 lg:order-2 space-y-4">
+              <div className="grid sm:grid-cols-2 gap-3">
+                {combatFlow.map((item, index) => (
+                  <motion.div
+                    key={item.step}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-secondary/30 rounded p-3 border border-border"
+                  >
+                    <h4 className="text-sm font-bold text-amber-300 mb-1">{item.step}</h4>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <div className="grid sm:grid-cols-2 gap-3 pt-2">
+                <div className="bg-red-950/20 rounded p-3 border border-red-900/30">
+                  <h4 className="text-sm font-bold text-red-300 mb-1">Ataque Livre</h4>
+                  <p className="text-xs text-muted-foreground">Ao se afastar de um inimigo em corpo a corpo ou ao passar por um inimigo com arma Longa, o inimigo recebe um ataque gratuito.</p>
+                </div>
+                <div className="bg-amber-950/20 rounded p-3 border border-amber-900/30">
+                  <h4 className="text-sm font-bold text-amber-300 mb-1">Limiar de Dor</h4>
+                  <p className="text-xs text-muted-foreground">Quando a Vitalidade cai abaixo do Limiar de Dor, todas as rolagens ganham uma segunda chance de falha (role duas vezes, use o pior).</p>
+                </div>
+              </div>
             </div>
           </div>
         </CardContent>
