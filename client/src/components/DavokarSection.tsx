@@ -34,6 +34,7 @@ export default function DavokarSection() {
             alt="Mapa Oficial de Davokar"
             className="w-full max-h-[500px] object-contain object-top"
             style={{ clipPath: "inset(0 0 10px 0)" }}
+            loading="lazy"
           />
         </div>
       </Card>

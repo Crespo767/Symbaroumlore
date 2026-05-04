@@ -66,6 +66,7 @@ export default function TimelineSection() {
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663622705168/KdzVCAjsftQjBG3jYgoaKD/factions-ambria-iya4t8ZnFMzPYSVQ9ZkUNp.webp"
             alt="Reino de Ambria"
             className="w-full h-48 md:h-64 object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
           <div className="absolute bottom-4 left-6 right-6">

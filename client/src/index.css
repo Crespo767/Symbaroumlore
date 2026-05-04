@@ -165,6 +165,7 @@
 
 .particle {
   animation: float 8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .glow-pulse {

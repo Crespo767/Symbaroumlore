@@ -165,21 +165,24 @@ export default function Home() {
             </div>
           </div>
         }>
-          <motion.div
-            key={activeSection}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {activeSection === "historia" && <TimelineSection />}
-            {activeSection === "geografia" && <DavokarSection />}
-            {activeSection === "locais" && <LocationsSection />}
-            {activeSection === "faccoes" && <FactionsSection />}
-            {activeSection === "espiritualidade" && <SpiritualitySection />}
-            {activeSection === "racas" && <RacesSection />}
-            {/* {activeSection === "corrupcao" && <CorruptionSection />} */}
-            {/* {activeSection === "sistema" && <GameSystemSection />} */}
-          </motion.div>
+          <div className={activeSection === "historia" ? "block" : "hidden"}>
+            <TimelineSection />
+          </div>
+          <div className={activeSection === "geografia" ? "block" : "hidden"}>
+            <DavokarSection />
+          </div>
+          <div className={activeSection === "locais" ? "block" : "hidden"}>
+            <LocationsSection />
+          </div>
+          <div className={activeSection === "faccoes" ? "block" : "hidden"}>
+            <FactionsSection />
+          </div>
+          <div className={activeSection === "espiritualidade" ? "block" : "hidden"}>
+            <SpiritualitySection />
+          </div>
+          <div className={activeSection === "racas" ? "block" : "hidden"}>
+            <RacesSection />
+          </div>
         </Suspense>
       </main>
 
