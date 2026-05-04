@@ -42,11 +42,11 @@ export default function Home() {
     { id: "racas", label: "Raças", icon: Users },
     { id: "corrupcao", label: "Corrupção", icon: Skull },
     { id: "sistema", label: "Sistema", icon: Sword },
-    { id: "habilidades", label: "Habilidades", icon: Shield },
-    { id: "poderes", label: "Poderes", icon: Wand2 },
-    { id: "equipamentos", label: "Equipamentos", icon: Package },
-    { id: "criacao", label: "Criar Personagem", icon: UserPlus },
-    { id: "galeria", label: "Galeria Visual", icon: Sparkles },
+    // { id: "habilidades", label: "Habilidades", icon: Shield },
+    // { id: "poderes", label: "Poderes", icon: Wand2 },
+    // { id: "equipamentos", label: "Equipamentos", icon: Package },
+    // { id: "criacao", label: "Criar Personagem", icon: UserPlus },
+    // { id: "galeria", label: "Galeria Visual", icon: Sparkles },
   ];
 
   return (
@@ -164,11 +164,11 @@ export default function Home() {
           {activeSection === "racas" && <RacesSection />}
           {activeSection === "corrupcao" && <CorruptionSection />}
           {activeSection === "sistema" && <GameSystemSection />}
-          {activeSection === "habilidades" && <AbilitiesSection />}
+          {/* {activeSection === "habilidades" && <AbilitiesSection />}
           {activeSection === "poderes" && <PowersSection />}
           {activeSection === "equipamentos" && <EquipmentSection />}
           {activeSection === "criacao" && <CharacterCreationSection />}
-          {activeSection === "galeria" && <ImageGallerySection />}
+          {activeSection === "galeria" && <ImageGallerySection />} */}
         </motion.div>
       </main>
 
