@@ -15,12 +15,14 @@ import {
   Wand2,
   Package,
   UserPlus,
+  Calculator,
 } from "lucide-react";
 const TimelineSection = lazy(() => import("@/components/TimelineSection"));
 const DavokarSection = lazy(() => import("@/components/DavokarSection"));
 const FactionsSection = lazy(() => import("@/components/FactionsSection"));
 const RacesSection = lazy(() => import("@/components/RacesSection"));
 const LocationsSection = lazy(() => import("@/components/LocationsSection"));
+const AttributeCalculatorSection = lazy(() => import("@/components/AttributeCalculatorSection"));
 // const CorruptionSection = lazy(() => import("@/components/CorruptionSection"));
 const SpiritualitySection = lazy(() => import("@/components/SpiritualitySection"));
 // const GameSystemSection = lazy(() => import("@/components/GameSystemSection"));
@@ -47,6 +49,7 @@ export default function Home() {
     { id: "faccoes", label: "Facções", icon: Crown },
     { id: "espiritualidade", label: "Crenças", icon: Sparkles },
     { id: "racas", label: "Raças", icon: Users },
+    { id: "atributos", label: "Atributos", icon: Calculator },
     // { id: "corrupcao", label: "Corrupção", icon: Skull },
     // { id: "sistema", label: "Sistema", icon: Sword },
     // { id: "habilidades", label: "Habilidades", icon: Shield },
@@ -182,6 +185,9 @@ export default function Home() {
           </div>
           <div className={activeSection === "racas" ? "block" : "hidden"}>
             <RacesSection />
+          </div>
+          <div className={activeSection === "atributos" ? "block" : "hidden"}>
+            <AttributeCalculatorSection />
           </div>
         </Suspense>
       </main>
